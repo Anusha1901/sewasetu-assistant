@@ -165,4 +165,19 @@ expiring, browser-authenticated attachments. End the sign-in using the returned 
 Before starting this version against an existing database, apply migrations 001, 002 and
 `app/migrations/003_officer_agent.sql` in order. Fresh schema.sql includes all definitions.
 See `dev/STAGE4.md` for full verification, changes and deployment limitations. The
-evaluation dashboard is not implemented yet.
+evaluation dashboard is available at `/eval-dashboard`.
+
+## Public evaluation dashboard (Stage 6)
+
+`/eval-dashboard` is a read-only Flask page with local/live scenario filters, expected versus
+actual outcomes, synthetic citizen profiles, selected real Codex excerpts, and source-linked
+assertions. `/eval-dashboard/evidence.json` serves the same sanitized, bundled historical
+snapshot. Neither endpoint queries PostgreSQL or reads browser identities/credentials.
+The 376-check Stage 5 baseline remains distinct from new dashboard verification.
+
+Regenerate deliberately from retained local evidence with `python dev/build_evaluation_evidence.py`.
+It validates counts, source hashes, assertion references and synthetic outcomes against the
+reviewed synthetic-only database assertions in `dev/evidence/stage5`, publishing only an explicit public allowlist. Original
+logs, private snapshots and auth material remain unserved. Missing artifacts or unmatched
+assertions stop compilation; do not invent replacements. Do not overwrite Stage 5 logs
+when running Stage 6 regressions. See `dev/STAGE6.md` for verification and limitations.

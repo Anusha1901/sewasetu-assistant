@@ -1,0 +1,80 @@
+{"check": "test target is the approved public evaluation deployment", "passed": true}
+{"check": "simulator access uses authenticated assessor browser", "passed": true}
+{"check": "citizen real browser login reaches consent", "passed": true}
+{"check": "citizen OAuth state is returned unchanged", "passed": true}
+{"check": "citizen authorization code plus PKCE exchanges successfully", "passed": true}
+{"check": "officer real browser login reaches consent", "passed": true}
+{"check": "officer OAuth state is returned unchanged", "passed": true}
+{"check": "officer authorization code plus PKCE exchanges successfully", "passed": true}
+{"check": "officer real browser login reaches consent", "passed": true}
+{"check": "officer OAuth state is returned unchanged", "passed": true}
+{"check": "officer authorization code plus PKCE exchanges successfully", "passed": true}
+{"check": "citizen SDK discovers five tools", "passed": true}
+{"check": "officer SDK discovers four tools", "passed": true}
+{"check": "citizen token cannot access officer MCP", "passed": true}
+{"check": "officer token cannot access citizen MCP", "passed": true}
+{"check": "Rejection missing proof prevents submission readiness", "passed": true}
+{"check": "Rejection authenticated upload page opens", "passed": true}
+{"check": "Rejection browser uploads synthetic private PDF", "passed": true}
+{"check": "Rejection current document preview is ready", "passed": true}
+{"check": "Rejection synthetic case submitted through public MCP", "passed": true}
+{"check": "APPROVED requires nonblank reason on public server", "passed": true}
+{"check": "REJECTED requires nonblank reason on public server", "passed": true}
+{"check": "decision preview requires explicit confirmation", "passed": true}
+{"check": "rejection preview leaves application pending", "passed": true}
+{"check": "public rejection succeeds after explicit test confirmation", "passed": true}
+{"check": "rejection audit records exact reason and authenticated actor", "passed": true}
+{"check": "submission retry remains idempotent after rejection", "passed": true}
+{"check": "citizen sees rejected status and exact reason", "passed": true}
+{"check": "Withdrawal missing proof prevents submission readiness", "passed": true}
+{"check": "Withdrawal authenticated upload page opens", "passed": true}
+{"check": "Withdrawal browser uploads synthetic private PDF", "passed": true}
+{"check": "Withdrawal current document preview is ready", "passed": true}
+{"check": "Withdrawal synthetic case submitted through public MCP", "passed": true}
+{"check": "public withdrawal requires explicit confirmation", "passed": true}
+{"check": "public citizen withdrawal succeeds", "passed": true}
+{"check": "withdrawal audit uses authenticated citizen", "passed": true}
+{"check": "withdrawn case cannot be withdrawn again", "passed": true}
+{"check": "Competing Decisions missing proof prevents submission readiness", "passed": true}
+{"check": "Competing Decisions authenticated upload page opens", "passed": true}
+{"check": "Competing Decisions browser uploads synthetic private PDF", "passed": true}
+{"check": "Competing Decisions current document preview is ready", "passed": true}
+{"check": "Competing Decisions synthetic case submitted through public MCP", "passed": true}
+{"check": "decision preview requires explicit confirmation", "passed": true}
+{"check": "decision preview requires explicit confirmation", "passed": true}
+{"check": "competing previews do not record a decision", "passed": true}
+{"check": "two independent officer clients have exactly one winner", "passed": true}
+{"check": "competing decisions produce exactly one decision audit", "passed": true}
+{"check": "race outcome is stored without overwrite", "passed": true}
+{"check": "synthetic identity cannot withdraw another citizen case", "passed": true}
+{"check": "unsupported officer block remains denied", "passed": true}
+{"check": "citizen real browser login reaches consent", "passed": true}
+{"check": "citizen OAuth state is returned unchanged", "passed": true}
+{"check": "citizen authorization code plus PKCE exchanges successfully", "passed": true}
+{"check": "citizen token initially reaches protected tools", "passed": true}
+{"check": "citizen expiry fixture affects only its dedicated session", "passed": true}
+{"check": "citizen expired server session rejects protected tools", "passed": true}
+{"check": "citizen expired session cannot refresh", "passed": true}
+{"check": "citizen real browser login reaches consent", "passed": true}
+{"check": "citizen OAuth state is returned unchanged", "passed": true}
+{"check": "citizen authorization code plus PKCE exchanges successfully", "passed": true}
+{"check": "citizen standard OAuth revocation endpoint succeeds", "passed": true}
+{"check": "citizen revoked access cannot reach protected tools", "passed": true}
+{"check": "citizen revoked refresh token cannot mint new access", "passed": true}
+{"check": "officer real browser login reaches consent", "passed": true}
+{"check": "officer OAuth state is returned unchanged", "passed": true}
+{"check": "officer authorization code plus PKCE exchanges successfully", "passed": true}
+{"check": "officer token initially reaches protected tools", "passed": true}
+{"check": "officer expiry fixture affects only its dedicated session", "passed": true}
+{"check": "officer expired server session rejects protected tools", "passed": true}
+{"check": "officer expired session cannot refresh", "passed": true}
+{"check": "officer real browser login reaches consent", "passed": true}
+{"check": "officer OAuth state is returned unchanged", "passed": true}
+{"check": "officer authorization code plus PKCE exchanges successfully", "passed": true}
+{"check": "officer standard OAuth revocation endpoint succeeds", "passed": true}
+{"check": "officer revoked access cannot reach protected tools", "passed": true}
+{"check": "officer revoked refresh token cannot mint new access", "passed": true}
+{"check": "officer real browser login reaches consent", "passed": true}
+{"check": "officer OAuth state is returned unchanged", "passed": true}
+{"check": "officer authorization code plus PKCE exchanges successfully", "passed": true}
+{"summary": {"passed": 79, "failed": 0}, "synthetic_application_ids": [100012, 100013, 100014], "quiet_window_can_start_utc": "2026-10-30T08:46:54.846108+00:00"}

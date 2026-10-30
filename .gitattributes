@@ -1,0 +1,2 @@
+# Preserve source-artifact hashes across Windows and Linux checkouts.
+dev/evidence/stage5/* -text

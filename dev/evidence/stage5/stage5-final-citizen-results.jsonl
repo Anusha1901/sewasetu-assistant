@@ -1,0 +1,46 @@
+{"check": "unauthenticated MCP challenge", "passed": true}
+{"check": "canonical protected resource discovery", "passed": true}
+{"check": "invalid bearer rejected", "passed": true}
+{"check": "citizen browser reaches consent", "passed": true}
+{"check": "citizen token exchange", "passed": true}
+{"check": "untrusted browser origin rejected", "passed": true}
+{"check": "officer browser reaches consent", "passed": true}
+{"check": "officer token exchange", "passed": true}
+{"check": "officer token denied citizen MCP", "passed": true}
+{"check": "citizen browser reaches consent", "passed": true}
+{"check": "citizen token exchange", "passed": true}
+{"check": "wrong audience denied", "passed": true}
+{"check": "officer MCP remains inaccessible without officer authentication", "passed": true}
+{"check": "exactly five citizen tools", "passed": true}
+{"check": "scheme info uses configured rules", "passed": true}
+{"check": "invalid application returns errors", "passed": true}
+{"check": "unsupported block rejected in preparation", "passed": true}
+{"check": "unsupported block browser upload denied", "passed": true}
+{"check": "unsupported block rejected on submit", "passed": true}
+{"check": "no proof prevents readiness", "passed": true}
+{"check": "upload link alone is not identity", "passed": true}
+{"check": "expired upload link rejected", "passed": true}
+{"check": "matching OAuth browser can open upload", "passed": true}
+{"check": "upload CSRF rejected", "passed": true}
+{"check": "invalid PDF content rejected", "passed": true}
+{"check": "valid browser upload succeeds", "passed": true}
+{"check": "upload link is single use", "passed": true}
+{"check": "stale document preview rejected", "passed": true}
+{"check": "uploaded proof reflected in current preview", "passed": true}
+{"check": "explicit declaration required", "passed": true}
+{"check": "declaration must be a real boolean", "passed": true}
+{"check": "MCP submission persisted", "passed": true}
+{"check": "duplicate retry returns same application", "passed": true}
+{"check": "one application and one submit audit", "passed": true}
+{"check": "browser acknowledgment download", "passed": true}
+{"check": "own application history only", "passed": true}
+{"check": "other citizen withdrawal denied", "passed": true}
+{"check": "withdrawal requires confirmation", "passed": true}
+{"check": "MCP withdrawal persisted with audit", "passed": true}
+{"check": "browser sign-out succeeds", "passed": true}
+{"check": "signed-out access token immediately rejected", "passed": true}
+{"check": "signed-out refresh rejected", "passed": true}
+{"check": "citizen browser reaches consent", "passed": true}
+{"check": "citizen token exchange", "passed": true}
+{"check": "expired server session rejected", "passed": true}
+{"summary": {"passed": 45, "failed": 0}, "synthetic_application_id": 100019}

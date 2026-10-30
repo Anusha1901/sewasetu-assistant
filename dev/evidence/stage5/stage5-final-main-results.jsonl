@@ -1,0 +1,78 @@
+{"check": "Postgres SELECT 1", "passed": true}
+{"baseline_statuses": {"APPROVED": 82902, "DEEMED_APPROVED": 9701, "REJECTED": 7001, "WITHDRAWN": 402}, "application_count": 100006, "audit_count": 200012}
+{"check": "GET /", "passed": true}
+{"check": "GET /about", "passed": true}
+{"check": "GET /apply", "passed": true}
+{"check": "GET /status", "passed": true}
+{"check": "GET /admin", "passed": true}
+{"check": "GET /__gateway/", "passed": true}
+{"check": "OAuth discovery", "passed": true}
+{"check": "JWKS available", "passed": true}
+{"check": "anonymous officer dashboard denied", "passed": true}
+{"check": "wrong officer password rejected", "passed": true}
+{"check": "officer dashboard login", "passed": true}
+{"check": "captcha form loads", "passed": true}
+{"check": "OTP sent through portal", "passed": true}
+{"check": "invalid OTP rejected", "passed": true}
+{"check": "delivered OTP accepted", "passed": true}
+{"check": "missing proof rejected in preview", "passed": true}
+{"check": "PDF upload and declaration preview", "passed": true}
+{"check": "underage submission rejected", "passed": true}
+{"check": "invalid block submission rejected", "passed": true}
+{"check": "invalid bank submission rejected", "passed": true}
+{"check": "submission persisted and confirmation rendered", "passed": true}
+{"check": "uploaded document exists", "passed": true}
+{"check": "submit audit exists", "passed": true}
+{"check": "own application readable", "passed": true}
+{"check": "acknowledgment PDF", "passed": true}
+{"check": "DOB status login", "passed": true}
+{"check": "other citizen record denied", "passed": true}
+{"check": "other citizen acknowledgment denied", "passed": true}
+{"check": "officer /admin/applications", "passed": true}
+{"check": "officer /admin/applications", "passed": true}
+{"check": "officer /admin/application/100017", "passed": true}
+{"check": "officer approval persisted", "passed": true}
+{"check": "approval reason and actor audited", "passed": true}
+{"check": "captcha form loads", "passed": true}
+{"check": "OTP sent through portal", "passed": true}
+{"check": "invalid OTP rejected", "passed": true}
+{"check": "delivered OTP accepted", "passed": true}
+{"check": "PDF upload and declaration preview", "passed": true}
+{"check": "submission persisted and confirmation rendered", "passed": true}
+{"check": "uploaded document exists", "passed": true}
+{"check": "submit audit exists", "passed": true}
+{"check": "pending withdrawal persisted and audited", "passed": true}
+{"check": "captcha form loads", "passed": true}
+{"check": "OTP sent through portal", "passed": true}
+{"check": "invalid OTP rejected", "passed": true}
+{"check": "delivered OTP accepted", "passed": true}
+{"check": "PDF upload and declaration preview", "passed": true}
+{"check": "submission persisted and confirmation rendered", "passed": true}
+{"check": "uploaded document exists", "passed": true}
+{"check": "submit audit exists", "passed": true}
+{"check": "officer rejection persisted and audited", "passed": true}
+{"check": "citizen OAuth client registration", "passed": true}
+{"check": "citizen OAuth login page", "passed": true}
+{"check": "citizen OAuth consent reached", "passed": true}
+{"check": "citizen OAuth state returned", "passed": true}
+{"check": "citizen OAuth token exchange", "passed": true}
+{"check": "citizen JWT signature, issuer, audience, role, subject", "passed": true}
+{"check": "citizen access lifetime bounded", "passed": true}
+{"check": "citizen authorization code single use", "passed": true}
+{"check": "citizen refresh rotation and fixed session end", "passed": true}
+{"check": "citizen old refresh rejected", "passed": true}
+{"check": "citizen revoke endpoint", "passed": true}
+{"check": "citizen revoked refresh rejected", "passed": true}
+{"check": "officer OAuth client registration", "passed": true}
+{"check": "officer OAuth login page", "passed": true}
+{"check": "officer OAuth consent reached", "passed": true}
+{"check": "officer OAuth state returned", "passed": true}
+{"check": "officer OAuth token exchange", "passed": true}
+{"check": "officer JWT signature, issuer, audience, role, subject", "passed": true}
+{"check": "officer access lifetime bounded", "passed": true}
+{"check": "officer authorization code single use", "passed": true}
+{"check": "officer refresh rotation and fixed session end", "passed": true}
+{"check": "officer old refresh rejected", "passed": true}
+{"check": "officer revoke endpoint", "passed": true}
+{"check": "officer revoked refresh rejected", "passed": true}
+{"summary": {"passed": 76, "failed": 0}, "test_application_ids": [100017, 100018, 100020], "final_statuses": {"APPROVED": 82903, "DEEMED_APPROVED": 9701, "REJECTED": 7002, "WITHDRAWN": 404}}

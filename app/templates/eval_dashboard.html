@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evidence from Seva Setu citizen and officer MCP evaluations: real Codex sessions, public protocol tests and local regression checks.">
+  <title>Seva Setu · Evaluation record</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='eval-dashboard.css') }}">
+  <script src="{{ url_for('static', filename='eval-dashboard.js') }}" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to evaluation results</a>
+<header class="site-header"><div class="wrap header-inner">
+  <a class="brand" href="/eval-dashboard"><span class="brand-mark" aria-hidden="true">SS</span><span>Seva Setu<small>PENSION AGENT EVALUATION</small></span></a>
+  <nav aria-label="Evaluation sections"><a href="#scenarios">Scenarios</a><a href="#people">Test citizens</a><a href="#conversation">Conversation</a><a href="#evidence">Evidence</a></nav>
+  <a class="portal-link" href="/">Open portal <span aria-hidden="true">↗</span></a>
+</div></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="page-title">
+  <div><p class="eyebrow"><span class="dot"></span> BUILD FOR BHARAT · STAGE 5 EVIDENCE</p>
+    <h1 id="page-title">Pension access,<br><em>with a paper trail.</em></h1>
+    <p class="lead">Citizen and officer assistants use official MCP tools. The existing portal keeps the rules, the records, and the audit trail.</p>
+    <div class="hero-actions"><a class="button primary" href="#scenarios">Explore the evaluations <span aria-hidden="true">↓</span></a><a class="text-link" href="#connections">Connect your assistant ↗</a></div>
+    <p class="snapshot">Recorded {{ evidence.recorded_on }} · Historical evidence snapshot, not a live health monitor.</p>
+  </div>
+  <aside class="workflow" aria-labelledby="workflow-title"><p class="eyebrow">ONE PORTAL. TWO AGENT CHANNELS.</p><h2 id="workflow-title">From request to recorded decision</h2>
+    <ol><li><b>Verify in the browser</b><span>Citizen OTP or officer sign-in; credentials stay out of chat.</span></li><li><b>Prepare and upload privately</b><span>The citizen reviews details and accepts the declaration.</span></li><li><b>Submit through shared services</b><span>Same validations and PostgreSQL record as the portal.</span></li><li><b>Review, preview, confirm</b><span>The officer records a reason under the authenticated identity.</span></li><li><b>Follow up from either channel</b><span>The citizen sees the decision; the audit explains it.</span></li></ol>
+  </aside>
+</section>
+<section class="wrap metrics" aria-label="Recorded automated results">
+  <div><span class="metric-number">{{ evidence.baseline.passed }}<small>/{{ evidence.baseline.passed + evidence.baseline.failed }}</small></span><span>recorded checks passed</span></div>
+  <div><span class="metric-number">{{ evidence.baseline.local }}</span><span>local regression checks</span></div>
+  <div><span class="metric-number">{{ evidence.baseline.live }}</span><span>live deployment checks</span></div>
+  <div><span class="metric-number">{{ evidence.cases|length }}</span><span>synthetic application records</span></div>
+</section>
+<div class="wrap metric-note">{{ evidence.baseline.count_note }} NOT TESTED scenarios are excluded from the recorded-check denominator.</div>
+
+<section id="connections" class="wrap section"><div class="section-heading"><div><p class="eyebrow">OFFICIAL MCP ENDPOINTS</p><h2>Connect, authenticate, then act.</h2></div><span class="outline-tag">Streamable HTTP · OAuth + PKCE</span></div>
+  <div class="endpoint-grid">
+  {% for role, count, description in [('citizen',5,'Prepare, submit, track and withdraw your own application.'),('officer',4,'Inspect the queue and confirm a reasoned decision.')] %}
+    <article class="endpoint"><div class="endpoint-head"><h3>{{ role|title }} MCP</h3><span>{{ count }} tools</span></div><p>{{ description }}</p><code id="endpoint-{{ role }}">{{ evidence.deployment_url }}/mcp/{{ role }}</code><button class="copy-button" type="button" data-copy="endpoint-{{ role }}">Copy {{ role }} endpoint</button></article>
+  {% endfor %}</div>
+  <p class="restriction"><b>Agent pilot: Sonari and Rajapara only.</b> Both MCP servers enforce the configurable allowlist. The existing web portal retains all six blocks. A mobile number supplied in conversation is never proof of identity. Read evaluator credentials through the private submission channel; none are published here.</p>
+</section>
+
+<section id="scenarios" class="tinted"><div class="wrap section">
+  <div class="section-heading"><div><p class="eyebrow">EXPECTED → ACTUAL → EVIDENCE</p><h2>What we tested.</h2></div><p>Expand a scenario to inspect its evidence.<br>Scope labels prevent local results being presented as live tests.</p></div>
+  <div class="filters" id="scenario-controls" hidden><div><label for="scenario-search">Find a scenario</label><input id="scenario-search" type="search" placeholder="Search validation, OAuth, scheduler…"></div><div><label for="scope-filter">Evidence scope</label><select id="scope-filter"><option value="all">All scopes</option><option value="LIVE">Live public MCP / deployment</option><option value="LOCAL">Local regression</option><option value="MIXED">Local + live</option><option value="NOT TESTED">Not tested</option></select></div><div><label for="category-filter">Category</label><select id="category-filter"><option value="all">All categories</option>{% for category in ['Citizen','Officer','Security','Reliability'] %}<option>{{ category }}</option>{% endfor %}</select></div></div>
+  <p id="result-count" class="muted" role="status" aria-live="polite">{{ evidence.scenarios|length }} scenarios · {{ evidence.scenarios|selectattr('status','equalto','NOT TESTED')|list|length }} explicitly not tested</p>
+  <div class="scenario-list">{% for scenario in evidence.scenarios %}
+    <details class="scenario" id="scenario-{{ scenario.id }}" data-scope="{{ scenario.scope }}" data-category="{{ scenario.category }}" data-search="{{ (scenario.title ~ ' ' ~ scenario.expected ~ ' ' ~ scenario.actual)|lower }}">
+      <summary><span class="status {{ 'pass' if scenario.status == 'PASS' else 'untested' }}">{{ scenario.status }}</span><span class="scenario-title">{{ scenario.title }}<small>{{ scenario.category }} · {{ scenario.scope }}</small></span><span class="expand-mark" aria-hidden="true">+</span></summary>
+      <div class="scenario-body"><div class="comparison"><div><h4>Expected</h4><p>{{ scenario.expected }}</p></div><div><h4>Actual</h4><p>{{ scenario.actual }}</p></div></div>
+        {% if scenario.check_ids %}<h4>Recorded assertions</h4><ul class="assertions">{% for ident in scenario.check_ids %}<li><span aria-label="passed">✓</span> {{ lookup[ident].name }} <a href="#{{ lookup[ident].source_id }}">{{ lookup[ident].scope }} · source</a></li>{% endfor %}</ul>{% else %}<p class="not-tested-note">No passing result is claimed. This scenario contributes zero checks to the summary.</p>{% endif %}
+      </div>
+    </details>{% endfor %}</div>
+  <p id="no-results" hidden>No scenarios match. Clear the search or select another scope.</p>
+</div></section>
+
+<section id="people" class="wrap section"><div class="section-heading"><div><p class="eyebrow">FICTIONAL PEOPLE. REAL TEST RECORDS.</p><h2>The citizens behind the checks.</h2></div><p>Names, ages and villages below are synthetic.<br>No real citizen record or private document is displayed.</p></div>
+  <div class="people-grid">{% for case in evidence.cases %}<article class="person"><div class="person-top"><span class="person-index">0{{ loop.index }}</span><span class="status pass">{{ case.status }}</span></div><h3>{{ case.name }}</h3><p class="person-meta">Age {{ case.age }} at evaluation · {{ case.block }}<br>{{ case.village }}</p><span class="mode">{{ case.mode }}</span><dl><dt>Interaction</dt><dd>{{ case.voice }}</dd><dt>Goal</dt><dd>{{ case.goal }}</dd><dt>Database must show</dt><dd>{{ case.database_expectation }}</dd><dt>Verified outcome</dt><dd>{{ case.actual }}</dd></dl><p class="case-number">Synthetic record <code>{{ case.number }}</code> · id {{ case.id }}</p></article>{% endfor %}</div>
+  <p class="restriction">The three SDK scenarios reused one dedicated synthetic citizen identity sequentially after rejection or withdrawal. They are three application fixtures, not three independent AI conversations. Only the Kamala run was operator-guided through Codex. Its approval explicitly records an evaluation-only reason; it is not evidence of real pension eligibility or payment.</p>
+</section>
+
+<section id="conversation" class="tinted"><div class="wrap section conversation-layout"><div><p class="eyebrow">ACTUAL CODEX SESSION</p><h2>A conversation,<br>with the boundaries visible.</h2><p>{{ evidence.conversation_note }}</p><a class="text-link" href="#database-checks">Inspect the database corroboration ↓</a></div><ol class="transcript">{% for turn in evidence.conversation %}<li class="{{ 'operator' if turn.kind.startswith('Operator') else 'tool' }}"><span>{{ turn.kind }}</span><p>{{ turn.text }}</p></li>{% endfor %}</ol></div></section>
+
+<section id="evidence" class="wrap section"><div class="section-heading"><div><p class="eyebrow">TRACEABLE, NOT REAL-TIME</p><h2>Inspect the evidence.</h2></div><a class="button secondary" href="/eval-dashboard/evidence.json">Open sanitized JSON ↗</a></div>
+  <p>{{ evidence.timestamp_note }} Every automated assertion below comes from a recorded suite. Source digests identify the retained artifacts; raw logs are not served. The original files and reports are available in the private submission repository.</p>
+  <div class="scope-key"><span><i class="key-local"></i> LOCAL: Docker / disposable PostgreSQL schemas</span><span><i class="key-live"></i> LIVE: public HTTPS deployment / official SDK</span><span>CODEX: actual human/assistant session, separately corroborated</span></div>
+  <div class="source-list">{% for source in evidence.sources %}<details class="source" id="{{ source.id }}"><summary><span>{{ source.name }}<small>{{ source.scope }}</small></span><b>{% if source.count %}{{ source.count }} checks{% else %}Supporting evidence{% endif %}</b></summary><div><p class="digest"><b>SHA-256</b> {{ source.sha256 }}</p>{% if groups[source.id] %}<ul class="assertions">{% for check in groups[source.id] %}<li id="{{ check.id }}"><span>✓</span> {{ check.name }}</li>{% endfor %}</ul>{% else %}<p>Supporting checks below corroborate the real Codex session. They are not added again to the 376-check baseline.</p>{% endif %}</div></details>{% endfor %}</div>
+  <div id="database-checks" class="corroboration"><h3>Codex session: database corroboration</h3><p>Read-only assertions against the synthetic case; no database browsing endpoint is exposed.</p><ul class="assertions">{% for item in evidence.corroboration %}<li><span>✓</span> {{ item.name }}</li>{% endfor %}</ul></div>
+  <details class="snapshot-digest"><summary>Public snapshot integrity</summary><p class="digest">SHA-256 of the bundled evidence file: {{ digest }}</p><p>Regenerate using the local evidence compiler. This hash identifies the file, not a signature, external attestation, or a guarantee of completeness.</p></details>
+</section>
+
+<section class="tinted"><div class="wrap section"><p class="eyebrow">WHAT THE EVALUATIONS CHANGED</p><h2>Lessons carried into the implementation.</h2><div class="learning-grid">{% for lesson in evidence.learnings %}<article><span>0{{ loop.index }}</span><h3>{{ lesson.title }}</h3><p>{{ lesson.text }}</p></article>{% endfor %}</div></div></section>
+
+<section id="limitations" class="wrap section"><div class="section-heading"><div><p class="eyebrow">LIMITS, DECLARED UP FRONT</p><h2>What these results do not promise.</h2></div></div>
+  <div class="limitations-grid"><article><h3>Scheme rules stay in force</h3><p>Minimum age {{ rules.age }} · ₹250/month · {{ rules.sla }}-day deemed approval. The configured application deadline is <b>{{ rules.deadline }}</b>.</p><p class="window-state">Current application window: <b>{{ 'OPEN' if rules.window_open else 'CLOSED' }}</b>. After closing, new submissions fail; follow-up and officer decisions continue. Historical passing results do not override the deadline.</p></article><article><h3>Free hosting is a compromise</h3><p>Render sleeps; the measured reconnect took about 26 seconds. Allow 60–120 seconds and retries in external clients. Free quotas, Supabase inactivity pausing and best-effort GitHub scheduling remain operational constraints.</p></article><article><h3>Simulation and privacy</h3><p>SMS is simulated and requires authorized assessor access. The dashboard exposes no OTPs, passwords, tokens, bank details, private PDF links, or real citizen records. Application file logs remain ephemeral; private orphan uploads need retention management.</p></article><article><h3>Evidence has a boundary</h3><p>No Claude Code run, local-language conversation, field usability study, full-duration expiry wait, or 30-day uptime observation is claimed. This is a tested prototype with one configured departmental account, not a complete production security audit.</p></article></div>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap"><b>Seva Setu · Build for Bharat</b><p>The assistant is another channel. The portal remains the system of record.</p><a href="/">Portal</a><a href="#scenarios">Results</a><a href="/eval-dashboard/evidence.json">Sanitized evidence</a></div></footer>
+</body></html>

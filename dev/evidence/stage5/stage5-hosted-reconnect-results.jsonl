@@ -1,0 +1,3 @@
+{"check": "fresh external SDK connection discovers officer tools", "passed": true}
+{"check": "reconnected client calls protected officer tool", "passed": true}
+{"reconnect_seconds": 2.088}

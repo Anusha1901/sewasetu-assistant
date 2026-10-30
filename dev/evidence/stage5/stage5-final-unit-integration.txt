@@ -1,0 +1,97 @@
+test_changed_allowlist_blocks_existing_draft (test_citizen.CitizenTests.test_changed_allowlist_blocks_existing_draft) ... ok
+test_concurrent_initial_signing_keys (test_citizen.CitizenTests.test_concurrent_initial_signing_keys) ... ok
+test_concurrent_same_draft_retries (test_citizen.CitizenTests.test_concurrent_same_draft_retries) ... ok
+test_declaration_required_and_stale_preview (test_citizen.CitizenTests.test_declaration_required_and_stale_preview) ... ok
+test_different_draft_duplicate_submission (test_citizen.CitizenTests.test_different_draft_duplicate_submission) ... ok
+test_expired_and_revoked_sessions (test_citizen.CitizenTests.test_expired_and_revoked_sessions) ... ok
+test_expired_draft (test_citizen.CitizenTests.test_expired_draft) ... ok
+test_failed_shared_submission_does_not_mark_draft (test_citizen.CitizenTests.test_failed_shared_submission_does_not_mark_draft) ... ok
+test_invalid_details (test_citizen.CitizenTests.test_invalid_details) ... ok
+test_missing_document (test_citizen.CitizenTests.test_missing_document) ... ok
+test_same_mobile_different_session_cannot_read_draft (test_citizen.CitizenTests.test_same_mobile_different_session_cannot_read_draft) ... ok
+test_signed_token_claims_and_expiry (test_citizen.CitizenTests.test_signed_token_claims_and_expiry) ... ok
+test_status_and_withdrawal_ownership (test_citizen.CitizenTests.test_status_and_withdrawal_ownership) ... ok
+test_successful_submission_and_idempotent_retry (test_citizen.CitizenTests.test_successful_submission_and_idempotent_retry) ... ok
+test_unsupported_block (test_citizen.CitizenTests.test_unsupported_block) ... ok
+test_upload_link_browser_ownership_and_expiry (test_citizen.CitizenTests.test_upload_link_browser_ownership_and_expiry) ... ok
+test_invalid_allowlist_fails_closed (test_citizen.DocumentTests.test_invalid_allowlist_fails_closed) ... ok
+test_invalid_empty_oversize_and_extension (test_citizen.DocumentTests.test_invalid_empty_oversize_and_extension) ... ok
+test_public_configuration_fails_closed (test_citizen.DocumentTests.test_public_configuration_fails_closed) ... ok
+test_valid_pdf (test_citizen.DocumentTests.test_valid_pdf) ... ok
+test_valid_png_and_jpeg (test_citizen.DocumentTests.test_valid_png_and_jpeg) ... ok
+test_hosted_connection_enforces_ssl_private_schema_and_timezone (test_hosted.DatabaseTests.test_hosted_connection_enforces_ssl_private_schema_and_timezone) ... ok
+test_ini_default_is_preserved (test_hosted.DatabaseTests.test_ini_default_is_preserved) ... ok
+test_invalid_schema_is_rejected (test_hosted.DatabaseTests.test_invalid_schema_is_rejected) ... ok
+test_arbitrary_urls_buckets_and_traversal_rejected_without_request (test_hosted.DocumentTests.test_arbitrary_urls_buckets_and_traversal_rejected_without_request) ... ok
+test_cleanup_uses_private_delete (test_hosted.DocumentTests.test_cleanup_uses_private_delete) ... ok
+test_download_requires_backend_auth (test_hosted.DocumentTests.test_download_requires_backend_auth) ... ok
+test_download_size_limit (test_hosted.DocumentTests.test_download_size_limit) ... ok
+test_error_does_not_include_provider_body_or_secret (test_hosted.DocumentTests.test_error_does_not_include_provider_body_or_secret) ... ok
+test_local_default_survives_adapter_change (test_hosted.DocumentTests.test_local_default_survives_adapter_change) ... ok
+test_private_bucket_is_accepted (test_hosted.DocumentTests.test_private_bucket_is_accepted) ... ok
+test_public_bucket_fails_closed (test_hosted.DocumentTests.test_public_bucket_fails_closed) ... ok
+test_storage_outage_blocks_submission_instead_of_claiming_document_exists (test_hosted.DocumentTests.test_storage_outage_blocks_submission_instead_of_claiming_document_exists) ... ok
+test_upload_is_private_random_reference_without_mobile (test_hosted.DocumentTests.test_upload_is_private_random_reference_without_mobile) ... ok
+test_upload_limits (test_hosted.DocumentTests.test_upload_limits) ... ok
+test_all_terminal_statuses_cannot_be_overwritten (test_officer.OfficerTests.test_all_terminal_statuses_cannot_be_overwritten) ... ok
+test_approval_and_authenticated_audit_actor (test_officer.OfficerTests.test_approval_and_authenticated_audit_actor) ... ok
+test_audit_failure_rolls_back_review_and_decision (test_officer.OfficerTests.test_audit_failure_rolls_back_review_and_decision) ... ok
+test_case_and_proof_changes_require_new_review (test_officer.OfficerTests.test_case_and_proof_changes_require_new_review) ... ok
+test_changed_allowlist_blocks_prior_review (test_officer.OfficerTests.test_changed_allowlist_blocks_prior_review) ... ok
+test_changed_reason_or_decision_invalidates_confirmation (test_officer.OfficerTests.test_changed_reason_or_decision_invalidates_confirmation) ... ok
+test_competing_decisions_one_winner (test_officer.OfficerTests.test_competing_decisions_one_winner) ... ok
+test_direct_confirmation_without_preview_rejected (test_officer.OfficerTests.test_direct_confirmation_without_preview_rejected) ... ok
+test_expired_and_revoked_officer_session (test_officer.OfficerTests.test_expired_and_revoked_officer_session) ... ok
+test_expired_review (test_officer.OfficerTests.test_expired_review) ... ok
+test_inspection_and_browser_proof (test_officer.OfficerTests.test_inspection_and_browser_proof) ... ok
+test_pagination (test_officer.OfficerTests.test_pagination) ... ok
+test_queue_summary_and_list_are_scoped_and_masked (test_officer.OfficerTests.test_queue_summary_and_list_are_scoped_and_masked) ... ok
+test_rejection_with_reason (test_officer.OfficerTests.test_rejection_with_reason) ... ok
+test_required_reason (test_officer.OfficerTests.test_required_reason) ... ok
+test_review_bound_to_actor_session (test_officer.OfficerTests.test_review_bound_to_actor_session) ... ok
+test_strict_signed_officer_token (test_officer.OfficerTests.test_strict_signed_officer_token) ... ok
+test_unsafe_paths_not_served (test_officer.OfficerTests.test_unsafe_paths_not_served) ... ok
+test_unsupported_block_cannot_be_read_or_decided (test_officer.OfficerTests.test_unsupported_block_cannot_be_read_or_decided) ... ok
+test_withdrawal_race (test_officer.OfficerTests.test_withdrawal_race) ... ok
+test_immediate_repeat_does_not_duplicate_audit_or_notification (test_scheduler.SchedulerTests.test_immediate_repeat_does_not_duplicate_audit_or_notification) ... ok
+test_recent_pending_case_keeps_original_fifteen_day_cutoff (test_scheduler.SchedulerTests.test_recent_pending_case_keeps_original_fifteen_day_cutoff) ... ok
+test_two_competing_scheduler_runs_have_one_audit_and_notification (test_scheduler.SchedulerTests.test_two_competing_scheduler_runs_have_one_audit_and_notification) ... ok
+test_application_number_collision_retried (test_services.IntegrationTests.test_application_number_collision_retried) ... ok
+test_concurrent_decisions (test_services.IntegrationTests.test_concurrent_decisions) ... ok
+test_concurrent_submissions (test_services.IntegrationTests.test_concurrent_submissions) ... ok
+test_deadline_rejects_submission_but_not_followup (test_services.IntegrationTests.test_deadline_rejects_submission_but_not_followup) ... ok
+test_decision_audit_failure_rolls_back (test_services.IntegrationTests.test_decision_audit_failure_rolls_back) ... ok
+test_decision_vs_withdrawal (test_services.IntegrationTests.test_decision_vs_withdrawal) ... ok
+test_direct_database_duplicate_protection (test_services.IntegrationTests.test_direct_database_duplicate_protection) ... ok
+test_invalid_application_inserts_nothing (test_services.IntegrationTests.test_invalid_application_inserts_nothing) ... ok
+test_migration_is_repeatable (test_services.IntegrationTests.test_migration_is_repeatable) ... ok
+test_nonpending_cannot_be_decided_or_withdrawn (test_services.IntegrationTests.test_nonpending_cannot_be_decided_or_withdrawn) ... ok
+test_rejected_and_withdrawn_can_reapply (test_services.IntegrationTests.test_rejected_and_withdrawn_can_reapply) ... ok
+test_simultaneous_different_mobile_number_collision (test_services.IntegrationTests.test_simultaneous_different_mobile_number_collision) ... ok
+test_submission_and_ownership (test_services.IntegrationTests.test_submission_and_ownership) ... ok
+test_submission_audit_failure_rolls_back_everything (test_services.IntegrationTests.test_submission_audit_failure_rolls_back_everything) ... ok
+test_web_decision_requires_reason_and_ignores_forged_actor (test_services.IntegrationTests.test_web_decision_requires_reason_and_ignores_forged_actor) ... ok
+test_web_officer_boundary (test_services.IntegrationTests.test_web_officer_boundary) ... ok
+test_withdrawal_audit_failure_rolls_back (test_services.IntegrationTests.test_withdrawal_audit_failure_rolls_back) ... ok
+test_age_boundary (test_services.ValidationTests.test_age_boundary) ... ok
+test_bank_length (test_services.ValidationTests.test_bank_length) ... ok
+test_blocks_preserved (test_services.ValidationTests.test_blocks_preserved) ... ok
+test_deadline_exactly_preserved (test_services.ValidationTests.test_deadline_exactly_preserved) ... ok
+test_decision_inputs_rejected_before_database (test_services.ValidationTests.test_decision_inputs_rejected_before_database) ... ok
+test_document_required (test_services.ValidationTests.test_document_required) ... ok
+test_fixture_cleanup_refuses_a_non_test_schema (test_services.ValidationTests.test_fixture_cleanup_refuses_a_non_test_schema) ... ok
+test_ifsc_optional_but_validated_when_present (test_services.ValidationTests.test_ifsc_optional_but_validated_when_present) ... ok
+test_invalid_dob (test_services.ValidationTests.test_invalid_dob) ... ok
+test_leap_day_age (test_services.ValidationTests.test_leap_day_age) ... ok
+test_normalization_and_existing_optional_fields (test_services.ValidationTests.test_normalization_and_existing_optional_fields) ... ok
+2026-10-30 09:00:37 deemed approval: 1 applications approved
+2026-10-30 09:00:37 deemed approval: 0 applications approved
+2026-10-30 09:00:37 deemed approval: 0 applications approved
+2026-10-30 09:00:38 deemed approval: 1 applications approved
+2026-10-30 09:00:38 deemed approval: 0 applications approved
+test_required_fields (test_services.ValidationTests.test_required_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 87 tests in 7.892s
+
+OK

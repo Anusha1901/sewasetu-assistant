@@ -1,0 +1,8 @@
+{"check": "portal TLS and homepage", "passed": true}
+{"check": "database readiness", "passed": true}
+{"check": "canonical OAuth issuer and redirect discovery", "passed": true}
+{"check": "citizen denies missing credentials and advertises discovery", "passed": true}
+{"check": "citizen canonical resource scope issuer", "passed": true}
+{"check": "officer denies missing credentials and advertises discovery", "passed": true}
+{"check": "officer canonical resource scope issuer", "passed": true}
+{"check": "SMS inbox is not public", "passed": true}

@@ -1,0 +1,3 @@
+{"check": "official SDK automatic resource/AS discovery, registration, PKCE and tool call", "passed": true}
+{"check": "rotated citizen token retains active MCP session", "passed": true}
+{"check": "OAuth revocation immediately denies citizen access token", "passed": true}

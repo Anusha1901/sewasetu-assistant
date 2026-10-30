@@ -1,0 +1,30 @@
+{
+  "recorded_on": "2026-10-30",
+  "derivation": "Allowlisted fields from the verified Stage 5 synthetic-case persistence snapshot.",
+  "cases": [
+    {
+      "id": 100011,
+      "application_no": "SSP26495722",
+      "status": "APPROVED",
+      "audit_count": 2
+    },
+    {
+      "id": 100012,
+      "application_no": "SSP26545674",
+      "status": "REJECTED",
+      "audit_count": 2
+    },
+    {
+      "id": 100013,
+      "application_no": "SSP26669481",
+      "status": "WITHDRAWN",
+      "audit_count": 2
+    },
+    {
+      "id": 100014,
+      "application_no": "SSP26635026",
+      "status": "REJECTED",
+      "audit_count": 2
+    }
+  ]
+}

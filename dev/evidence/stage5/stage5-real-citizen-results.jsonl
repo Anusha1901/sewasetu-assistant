@@ -1,0 +1,5 @@
+{"check": "submitted application matches authenticated synthetic citizen and block", "passed": true, "application_no": "SSP26495722", "status": "PENDING"}
+{"check": "exactly one submission audit with authenticated actor", "passed": true}
+{"check": "draft revision 2 and declaration acceptance persisted", "passed": true}
+{"check": "exactly one active application for test citizen", "passed": true}
+{"check": "submitted age proof persists in private object storage", "passed": true}

@@ -1,0 +1,4 @@
+{"check": "cold reconnect waits at least sixteen minutes without test traffic", "passed": true}
+{"quiet_seconds": 988.612, "first_response": {"status": 200, "content_type": "application/json", "seconds_to_headers": 24.634}, "first_attempt_succeeded": true}
+{"check": "external MCP client connects on first post-idle attempt", "passed": true}
+{"cold_reconnect_total_seconds": 25.844}

@@ -1,0 +1,6 @@
+{"check": "application records and exact private documents persist", "passed": true}
+{"check": "persistent global application_count unchanged", "passed": true}
+{"check": "persistent global audit_count unchanged", "passed": true}
+{"check": "persistent global deemed_audit_count unchanged", "passed": true}
+{"check": "persistent global deemed_application_count unchanged", "passed": true}
+{"check": "persistent global simulated_message_count unchanged", "passed": true}

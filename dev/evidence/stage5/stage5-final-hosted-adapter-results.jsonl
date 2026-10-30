@@ -1,0 +1,12 @@
+Imported original seed into private schema: 100000 applications. No credentials printed.
+{"check": "original 100000-row seed imports into empty private schema", "passed": true}
+{"check": "portal tables stay outside public schema", "passed": true}
+{"check": "PUBLIC has no private-schema privileges", "passed": true}
+{"check": "repeated seed import refuses to overwrite records", "passed": true}
+{"check": "persistent simulator accepts synthetic notification", "passed": true}
+{"check": "simulator process reload preserves queued notification", "passed": true}
+{"check": "simulator recipient filter excludes other recipients", "passed": true}
+{"check": "simulator never returns an undelivered OTP as plaintext", "passed": true}
+{"check": "delivered notification remains readable after restart", "passed": true}
+{"check": "simulator tests preserve all seeded applications", "passed": true}
+{"summary": {"passed": 10, "failed": 0}}

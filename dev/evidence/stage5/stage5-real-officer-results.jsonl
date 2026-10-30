@@ -1,0 +1,3 @@
+{"check": "approval and authenticated officer persisted", "passed": true}
+{"check": "exactly one decision audit with confirmed reason and actor", "passed": true}
+{"check": "one active application remains after decision", "passed": true}

@@ -505,6 +505,9 @@ def admin_reject(app_id):
     return _admin_decide(app_id, "REJECTED", request.form.get("note", ""))
 
 
+from evaluation_dashboard import web as _evaluation_blueprint
+app.register_blueprint(_evaluation_blueprint)
+
 from oauth import oauth as _oauth_blueprint   # noqa: E402  (needs the definitions above)
 app.register_blueprint(_oauth_blueprint)
 

@@ -1,0 +1,3211 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-30",
+  "timestamp_note": "Date-level snapshot. Per-check timestamps were not recorded; none are invented.",
+  "deployment_url": "https://sewasetu-assistant-wgcq.onrender.com",
+  "baseline": {
+    "stage": 5,
+    "passed": 376,
+    "failed": 0,
+    "local": 275,
+    "live": 101,
+    "count_note": "87 unittest cases plus scenario assertions. The manual Codex conversation and its eight database corroboration checks are not added again."
+  },
+  "sources": [
+    {
+      "id": "suite-1",
+      "name": "stage5-final-main-results.jsonl",
+      "scope": "LOCAL",
+      "sha256": "f1f62d3c885a83f289ba4d269ca48155c9f3ea5037bc1429032f2bdbbe3207fd",
+      "count": 76
+    },
+    {
+      "id": "suite-2",
+      "name": "stage5-final-citizen-results.jsonl",
+      "scope": "LOCAL",
+      "sha256": "ece7e58c88746857ce496f1cf1eec24a24035efafed76995ee05221a9f91843c",
+      "count": 45
+    },
+    {
+      "id": "suite-3",
+      "name": "stage5-final-officer-results.jsonl",
+      "scope": "LOCAL",
+      "sha256": "df42ac566c9af3da3bc75e4db09934e57e793acd9a44f8feae79d938902aa504",
+      "count": 39
+    },
+    {
+      "id": "suite-4",
+      "name": "stage5-final-citizen-oauth-results.jsonl",
+      "scope": "LOCAL",
+      "sha256": "7b2d05c75a495331300de318874f18f8a86c2a6be011eae05598ab1ab05bd343",
+      "count": 3
+    },
+    {
+      "id": "suite-5",
+      "name": "stage5-final-persistence-results.jsonl",
+      "scope": "LOCAL",
+      "sha256": "a0a8ff4545e0d30691a610d8e2449661581132bcf13673d98a032c70e589f54c",
+      "count": 15
+    },
+    {
+      "id": "suite-6",
+      "name": "stage5-final-hosted-adapter-results.jsonl",
+      "scope": "LOCAL",
+      "sha256": "9f15e6cb8e9aecf88a22219f99fba43f1b1e7258d3397cbaf02bc54c154ba88f",
+      "count": 10
+    },
+    {
+      "id": "suite-7",
+      "name": "stage5-public-remaining-results.jsonl",
+      "scope": "LIVE",
+      "sha256": "08ce8dd25bd526228374e38dfcdc1230ed19e915525acf7055589c7d4b3628e3",
+      "count": 79
+    },
+    {
+      "id": "suite-8",
+      "name": "stage5-hosted-restart-results.jsonl",
+      "scope": "LIVE",
+      "sha256": "8ebe2257001a885e353049ce00dcfd9a432da651b98f5d2101d5ebf98825b41e",
+      "count": 6
+    },
+    {
+      "id": "suite-9",
+      "name": "stage5-hosted-reconnect-results.jsonl",
+      "scope": "LIVE",
+      "sha256": "b602198cf895fd465df4206d0dde4b219df2812c7d4e3344c27a38612a81f5bd",
+      "count": 2
+    },
+    {
+      "id": "suite-10",
+      "name": "stage5-cold-start-results.jsonl",
+      "scope": "LIVE",
+      "sha256": "883961f3e6c5081d88417e412e0befcb681938a0bd7b9ed6e5afc64d3cecf309",
+      "count": 2
+    },
+    {
+      "id": "suite-11",
+      "name": "stage5-final-public-probe-results.jsonl",
+      "scope": "LIVE",
+      "sha256": "45820e2bca2f2a5112df1a785a8e075fda9c7359a26ae297e27f758a2f7bf0cb",
+      "count": 8
+    },
+    {
+      "id": "suite-12",
+      "name": "stage5-scheduler-live-results.jsonl",
+      "scope": "LIVE",
+      "sha256": "5306f66373f4b38e089a4f7f25d399901da24f420bf872e84d479f836649548d",
+      "count": 4
+    },
+    {
+      "id": "suite-13",
+      "name": "stage5-final-unit-integration.txt",
+      "scope": "LOCAL",
+      "sha256": "05461010a3317b0b2a290e6dd4d64f587986f4b1ae657f8be1cfb8fda02260ee",
+      "count": 87
+    },
+    {
+      "id": "corroboration-13",
+      "name": "stage5-real-citizen-results.jsonl",
+      "scope": "CODEX DATABASE CHECK",
+      "sha256": "6642f108fec0029e48e4db5f6d35127cd5fb4f8f92c991efbd741725f2c070b8",
+      "count": 0
+    },
+    {
+      "id": "corroboration-14",
+      "name": "stage5-real-officer-results.jsonl",
+      "scope": "CODEX DATABASE CHECK",
+      "sha256": "dae86c089c804e39288b1a4dbd1f6af4369de6678dc8284be4408b98e67b480b",
+      "count": 0
+    }
+  ],
+  "checks": [
+    {
+      "id": "suite-1-1",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "Postgres SELECT 1",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-2",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "GET /",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-3",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "GET /about",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-4",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "GET /apply",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-5",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "GET /status",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-6",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "GET /admin",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-7",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "GET /__gateway/",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-8",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "OAuth discovery",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-9",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "JWKS available",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-10",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "anonymous officer dashboard denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-11",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "wrong officer password rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-12",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer dashboard login",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-13",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "captcha form loads",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-14",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "OTP sent through portal",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-15",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "invalid OTP rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-16",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "delivered OTP accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-17",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "missing proof rejected in preview",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-18",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "PDF upload and declaration preview",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-19",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "underage submission rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-20",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "invalid block submission rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-21",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "invalid bank submission rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-22",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "submission persisted and confirmation rendered",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-23",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "uploaded document exists",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-24",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "submit audit exists",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-25",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "own application readable",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-26",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "acknowledgment PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-27",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "DOB status login",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-28",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "other citizen record denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-29",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "other citizen acknowledgment denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-30",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer /admin/applications",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-31",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer /admin/applications",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-32",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer /admin/application/100017",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-33",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer approval persisted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-34",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "approval reason and actor audited",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-35",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "captcha form loads",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-36",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "OTP sent through portal",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-37",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "invalid OTP rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-38",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "delivered OTP accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-39",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "PDF upload and declaration preview",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-40",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "submission persisted and confirmation rendered",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-41",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "uploaded document exists",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-42",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "submit audit exists",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-43",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "pending withdrawal persisted and audited",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-44",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "captcha form loads",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-45",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "OTP sent through portal",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-46",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "invalid OTP rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-47",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "delivered OTP accepted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-48",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "PDF upload and declaration preview",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-49",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "submission persisted and confirmation rendered",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-50",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "uploaded document exists",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-51",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "submit audit exists",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-52",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer rejection persisted and audited",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-53",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen OAuth client registration",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-54",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen OAuth login page",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-55",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen OAuth consent reached",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-56",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen OAuth state returned",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-57",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen OAuth token exchange",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-58",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen JWT signature, issuer, audience, role, subject",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-59",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen access lifetime bounded",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-60",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen authorization code single use",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-61",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen refresh rotation and fixed session end",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-62",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen old refresh rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-63",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen revoke endpoint",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-64",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "citizen revoked refresh rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-65",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer OAuth client registration",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-66",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer OAuth login page",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-67",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer OAuth consent reached",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-68",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer OAuth state returned",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-69",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer OAuth token exchange",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-70",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer JWT signature, issuer, audience, role, subject",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-71",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer access lifetime bounded",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-72",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer authorization code single use",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-73",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer refresh rotation and fixed session end",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-74",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer old refresh rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-75",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer revoke endpoint",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-1-76",
+      "source_id": "suite-1",
+      "scope": "LOCAL",
+      "name": "officer revoked refresh rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-1",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "unauthenticated MCP challenge",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-2",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "canonical protected resource discovery",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-3",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "invalid bearer rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-4",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "citizen browser reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-5",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "citizen token exchange",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-6",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "untrusted browser origin rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-7",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "officer browser reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-8",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "officer token exchange",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-9",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "officer token denied citizen MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-10",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "citizen browser reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-11",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "citizen token exchange",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-12",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "wrong audience denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-13",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "officer MCP remains inaccessible without officer authentication",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-14",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "exactly five citizen tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-15",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "scheme info uses configured rules",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-16",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "invalid application returns errors",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-17",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "unsupported block rejected in preparation",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-18",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "unsupported block browser upload denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-19",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "unsupported block rejected on submit",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-20",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "no proof prevents readiness",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-21",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "upload link alone is not identity",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-22",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "expired upload link rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-23",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "matching OAuth browser can open upload",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-24",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "upload CSRF rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-25",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "invalid PDF content rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-26",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "valid browser upload succeeds",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-27",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "upload link is single use",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-28",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "stale document preview rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-29",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "uploaded proof reflected in current preview",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-30",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "explicit declaration required",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-31",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "declaration must be a real boolean",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-32",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "MCP submission persisted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-33",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "duplicate retry returns same application",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-34",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "one application and one submit audit",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-35",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "browser acknowledgment download",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-36",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "own application history only",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-37",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "other citizen withdrawal denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-38",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "withdrawal requires confirmation",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-39",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "MCP withdrawal persisted with audit",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-40",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "browser sign-out succeeds",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-41",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "signed-out access token immediately rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-42",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "signed-out refresh rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-43",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "citizen browser reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-44",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "citizen token exchange",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-2-45",
+      "source_id": "suite-2",
+      "scope": "LOCAL",
+      "name": "expired server session rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-1",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "officer MCP unauthenticated challenge",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-2",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "separate officer resource metadata",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-3",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "invalid officer bearer rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-4",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "exactly four officer tools via automatic OAuth discovery/DCR/PKCE",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-5",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "officer token role subject scope and lifetimes",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-6",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "officer token cannot access citizen server",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-7",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "invalid officer browser origin denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-8",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "citizen role denied officer MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-9",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "citizen scope denied officer MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-10",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "wrong audience denied officer MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-11",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "expired JWT rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-12",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "queue summary excludes unsupported blocks",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-13",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "mobile search returns only permitted matching case",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-14",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "queue response minimizes citizen PII",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-15",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "unsupported block filter denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-16",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "unsupported case inspection denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-17",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "case inspection contains audit and masked details",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-18",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "proof capability alone does not grant access",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-19",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "authenticated officer browser downloads proof",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-20",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "expired officer proof link denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-21",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "blank reason rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-22",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "direct unpreviewed confirmation denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-23",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "decision proposal does not mutate application",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-24",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "confirmation requires a real boolean",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-25",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "confirmation bound to exact reason",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-26",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "approval uses authenticated officer",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-27",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "approval reason and actor persisted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-28",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "replayed decision cannot overwrite",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-29",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "rejection recorded with reason",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-30",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "competing MCP decisions have exactly one winner",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-31",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "withdrawn case cannot be decided",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-32",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "unchanged statutory job approves overdue fixture",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-33",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "deemed approval cannot be overwritten",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-34",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "MCP decision visible in officer web portal",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-35",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "officer browser sign-out",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-36",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "officer access immediately revoked after sign-out",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-37",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "second officer client connects independently",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-38",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "officer refresh rotates within fixed session",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-3-39",
+      "source_id": "suite-3",
+      "scope": "LOCAL",
+      "name": "OAuth revocation immediately denies officer access",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-4-1",
+      "source_id": "suite-4",
+      "scope": "LOCAL",
+      "name": "official SDK automatic resource/AS discovery, registration, PKCE and tool call",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-4-2",
+      "source_id": "suite-4",
+      "scope": "LOCAL",
+      "name": "rotated citizen token retains active MCP session",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-4-3",
+      "source_id": "suite-4",
+      "scope": "LOCAL",
+      "name": "OAuth revocation immediately denies citizen access token",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-1",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "synthetic applications persisted across restart",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-2",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "uploaded proof files persisted across restart",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-3",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "synthetic audit entries persisted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-4",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "scheduler updates persisted without additional changes",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-5",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "scheduler audit did not duplicate on delayed restart",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-6",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "OAuth clients persisted",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-7",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "post-restart GET /",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-8",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "post-restart GET /admin",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-9",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "post-restart GET /__gateway/",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-10",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "post-restart GET /.well-known/oauth-authorization-server",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-11",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "post-restart GET /.well-known/jwks.json",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-12",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "SMS gateway accepts fresh OTP after restart",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-13",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "duplicate active application rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-14",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "duplicate attempt inserted no application",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-5-15",
+      "source_id": "suite-5",
+      "scope": "LOCAL",
+      "name": "final synthetic record count unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-1",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "original 100000-row seed imports into empty private schema",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-2",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "portal tables stay outside public schema",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-3",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "PUBLIC has no private-schema privileges",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-4",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "repeated seed import refuses to overwrite records",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-5",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "persistent simulator accepts synthetic notification",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-6",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "simulator process reload preserves queued notification",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-7",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "simulator recipient filter excludes other recipients",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-8",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "simulator never returns an undelivered OTP as plaintext",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-9",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "delivered notification remains readable after restart",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-6-10",
+      "source_id": "suite-6",
+      "scope": "LOCAL",
+      "name": "simulator tests preserve all seeded applications",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-1",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "test target is the approved public evaluation deployment",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-2",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "simulator access uses authenticated assessor browser",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-3",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-4",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-5",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-6",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-7",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-8",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-9",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-10",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-11",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-12",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen SDK discovers five tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-13",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer SDK discovers four tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-14",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen token cannot access officer MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-15",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer token cannot access citizen MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-16",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Rejection missing proof prevents submission readiness",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-17",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Rejection authenticated upload page opens",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-18",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Rejection browser uploads synthetic private PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-19",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Rejection current document preview is ready",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-20",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Rejection synthetic case submitted through public MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-21",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "APPROVED requires nonblank reason on public server",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-22",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "REJECTED requires nonblank reason on public server",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-23",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "decision preview requires explicit confirmation",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-24",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "rejection preview leaves application pending",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-25",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "public rejection succeeds after explicit test confirmation",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-26",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "rejection audit records exact reason and authenticated actor",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-27",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "submission retry remains idempotent after rejection",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-28",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen sees rejected status and exact reason",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-29",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Withdrawal missing proof prevents submission readiness",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-30",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Withdrawal authenticated upload page opens",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-31",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Withdrawal browser uploads synthetic private PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-32",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Withdrawal current document preview is ready",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-33",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Withdrawal synthetic case submitted through public MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-34",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "public withdrawal requires explicit confirmation",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-35",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "public citizen withdrawal succeeds",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-36",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "withdrawal audit uses authenticated citizen",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-37",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "withdrawn case cannot be withdrawn again",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-38",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Competing Decisions missing proof prevents submission readiness",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-39",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Competing Decisions authenticated upload page opens",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-40",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Competing Decisions browser uploads synthetic private PDF",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-41",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Competing Decisions current document preview is ready",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-42",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "Competing Decisions synthetic case submitted through public MCP",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-43",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "decision preview requires explicit confirmation",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-44",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "decision preview requires explicit confirmation",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-45",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "competing previews do not record a decision",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-46",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "two independent officer clients have exactly one winner",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-47",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "competing decisions produce exactly one decision audit",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-48",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "race outcome is stored without overwrite",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-49",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "synthetic identity cannot withdraw another citizen case",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-50",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "unsupported officer block remains denied",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-51",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-52",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-53",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-54",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen token initially reaches protected tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-55",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen expiry fixture affects only its dedicated session",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-56",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen expired server session rejects protected tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-57",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen expired session cannot refresh",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-58",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-59",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-60",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-61",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen standard OAuth revocation endpoint succeeds",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-62",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen revoked access cannot reach protected tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-63",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "citizen revoked refresh token cannot mint new access",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-64",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-65",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-66",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-67",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer token initially reaches protected tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-68",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer expiry fixture affects only its dedicated session",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-69",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer expired server session rejects protected tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-70",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer expired session cannot refresh",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-71",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-72",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-73",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-74",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer standard OAuth revocation endpoint succeeds",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-75",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer revoked access cannot reach protected tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-76",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer revoked refresh token cannot mint new access",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-77",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer real browser login reaches consent",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-78",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer OAuth state is returned unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-7-79",
+      "source_id": "suite-7",
+      "scope": "LIVE",
+      "name": "officer authorization code plus PKCE exchanges successfully",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-8-1",
+      "source_id": "suite-8",
+      "scope": "LIVE",
+      "name": "application records and exact private documents persist",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-8-2",
+      "source_id": "suite-8",
+      "scope": "LIVE",
+      "name": "persistent global application_count unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-8-3",
+      "source_id": "suite-8",
+      "scope": "LIVE",
+      "name": "persistent global audit_count unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-8-4",
+      "source_id": "suite-8",
+      "scope": "LIVE",
+      "name": "persistent global deemed_audit_count unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-8-5",
+      "source_id": "suite-8",
+      "scope": "LIVE",
+      "name": "persistent global deemed_application_count unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-8-6",
+      "source_id": "suite-8",
+      "scope": "LIVE",
+      "name": "persistent global simulated_message_count unchanged",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-9-1",
+      "source_id": "suite-9",
+      "scope": "LIVE",
+      "name": "fresh external SDK connection discovers officer tools",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-9-2",
+      "source_id": "suite-9",
+      "scope": "LIVE",
+      "name": "reconnected client calls protected officer tool",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-10-1",
+      "source_id": "suite-10",
+      "scope": "LIVE",
+      "name": "cold reconnect waits at least sixteen minutes without test traffic",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-10-2",
+      "source_id": "suite-10",
+      "scope": "LIVE",
+      "name": "external MCP client connects on first post-idle attempt",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-1",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "portal TLS and homepage",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-2",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "database readiness",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-3",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "canonical OAuth issuer and redirect discovery",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-4",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "citizen denies missing credentials and advertises discovery",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-5",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "citizen canonical resource scope issuer",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-6",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "officer denies missing credentials and advertises discovery",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-7",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "officer canonical resource scope issuer",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-11-8",
+      "source_id": "suite-11",
+      "scope": "LIVE",
+      "name": "SMS inbox is not public",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-12-1",
+      "source_id": "suite-12",
+      "scope": "LIVE",
+      "name": "fixed GitHub scheduler run 41030375367 succeeded",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-12-2",
+      "source_id": "suite-12",
+      "scope": "LIVE",
+      "name": "fixed GitHub scheduler run 41030731190 succeeded",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-12-3",
+      "source_id": "suite-12",
+      "scope": "LIVE",
+      "name": "scheduler reruns do not change application records",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-12-4",
+      "source_id": "suite-12",
+      "scope": "LIVE",
+      "name": "scheduler reruns do not add duplicate audit entries",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-1",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_age_boundary (test_services.ValidationTests.test_age_boundary)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-2",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_all_terminal_statuses_cannot_be_overwritten (test_officer.OfficerTests.test_all_terminal_statuses_cannot_be_overwritten)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-3",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_application_number_collision_retried (test_services.IntegrationTests.test_application_number_collision_retried)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-4",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_approval_and_authenticated_audit_actor (test_officer.OfficerTests.test_approval_and_authenticated_audit_actor)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-5",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_arbitrary_urls_buckets_and_traversal_rejected_without_request (test_hosted.DocumentTests.test_arbitrary_urls_buckets_and_traversal_rejected_without_request)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-6",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_audit_failure_rolls_back_review_and_decision (test_officer.OfficerTests.test_audit_failure_rolls_back_review_and_decision)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-7",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_bank_length (test_services.ValidationTests.test_bank_length)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-8",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_blocks_preserved (test_services.ValidationTests.test_blocks_preserved)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-9",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_case_and_proof_changes_require_new_review (test_officer.OfficerTests.test_case_and_proof_changes_require_new_review)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-10",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_changed_allowlist_blocks_existing_draft (test_citizen.CitizenTests.test_changed_allowlist_blocks_existing_draft)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-11",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_changed_allowlist_blocks_prior_review (test_officer.OfficerTests.test_changed_allowlist_blocks_prior_review)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-12",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_changed_reason_or_decision_invalidates_confirmation (test_officer.OfficerTests.test_changed_reason_or_decision_invalidates_confirmation)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-13",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_cleanup_uses_private_delete (test_hosted.DocumentTests.test_cleanup_uses_private_delete)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-14",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_competing_decisions_one_winner (test_officer.OfficerTests.test_competing_decisions_one_winner)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-15",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_concurrent_decisions (test_services.IntegrationTests.test_concurrent_decisions)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-16",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_concurrent_initial_signing_keys (test_citizen.CitizenTests.test_concurrent_initial_signing_keys)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-17",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_concurrent_same_draft_retries (test_citizen.CitizenTests.test_concurrent_same_draft_retries)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-18",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_concurrent_submissions (test_services.IntegrationTests.test_concurrent_submissions)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-19",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_deadline_exactly_preserved (test_services.ValidationTests.test_deadline_exactly_preserved)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-20",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_deadline_rejects_submission_but_not_followup (test_services.IntegrationTests.test_deadline_rejects_submission_but_not_followup)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-21",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_decision_audit_failure_rolls_back (test_services.IntegrationTests.test_decision_audit_failure_rolls_back)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-22",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_decision_inputs_rejected_before_database (test_services.ValidationTests.test_decision_inputs_rejected_before_database)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-23",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_decision_vs_withdrawal (test_services.IntegrationTests.test_decision_vs_withdrawal)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-24",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_declaration_required_and_stale_preview (test_citizen.CitizenTests.test_declaration_required_and_stale_preview)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-25",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_different_draft_duplicate_submission (test_citizen.CitizenTests.test_different_draft_duplicate_submission)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-26",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_direct_confirmation_without_preview_rejected (test_officer.OfficerTests.test_direct_confirmation_without_preview_rejected)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-27",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_direct_database_duplicate_protection (test_services.IntegrationTests.test_direct_database_duplicate_protection)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-28",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_document_required (test_services.ValidationTests.test_document_required)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-29",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_download_requires_backend_auth (test_hosted.DocumentTests.test_download_requires_backend_auth)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-30",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_download_size_limit (test_hosted.DocumentTests.test_download_size_limit)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-31",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_error_does_not_include_provider_body_or_secret (test_hosted.DocumentTests.test_error_does_not_include_provider_body_or_secret)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-32",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_expired_and_revoked_officer_session (test_officer.OfficerTests.test_expired_and_revoked_officer_session)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-33",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_expired_and_revoked_sessions (test_citizen.CitizenTests.test_expired_and_revoked_sessions)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-34",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_expired_draft (test_citizen.CitizenTests.test_expired_draft)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-35",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_expired_review (test_officer.OfficerTests.test_expired_review)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-36",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_failed_shared_submission_does_not_mark_draft (test_citizen.CitizenTests.test_failed_shared_submission_does_not_mark_draft)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-37",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_fixture_cleanup_refuses_a_non_test_schema (test_services.ValidationTests.test_fixture_cleanup_refuses_a_non_test_schema)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-38",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_hosted_connection_enforces_ssl_private_schema_and_timezone (test_hosted.DatabaseTests.test_hosted_connection_enforces_ssl_private_schema_and_timezone)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-39",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_ifsc_optional_but_validated_when_present (test_services.ValidationTests.test_ifsc_optional_but_validated_when_present)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-40",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_immediate_repeat_does_not_duplicate_audit_or_notification (test_scheduler.SchedulerTests.test_immediate_repeat_does_not_duplicate_audit_or_notification)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-41",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_ini_default_is_preserved (test_hosted.DatabaseTests.test_ini_default_is_preserved)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-42",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_inspection_and_browser_proof (test_officer.OfficerTests.test_inspection_and_browser_proof)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-43",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_invalid_allowlist_fails_closed (test_citizen.DocumentTests.test_invalid_allowlist_fails_closed)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-44",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_invalid_application_inserts_nothing (test_services.IntegrationTests.test_invalid_application_inserts_nothing)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-45",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_invalid_details (test_citizen.CitizenTests.test_invalid_details)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-46",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_invalid_dob (test_services.ValidationTests.test_invalid_dob)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-47",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_invalid_empty_oversize_and_extension (test_citizen.DocumentTests.test_invalid_empty_oversize_and_extension)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-48",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_invalid_schema_is_rejected (test_hosted.DatabaseTests.test_invalid_schema_is_rejected)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-49",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_leap_day_age (test_services.ValidationTests.test_leap_day_age)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-50",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_local_default_survives_adapter_change (test_hosted.DocumentTests.test_local_default_survives_adapter_change)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-51",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_migration_is_repeatable (test_services.IntegrationTests.test_migration_is_repeatable)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-52",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_missing_document (test_citizen.CitizenTests.test_missing_document)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-53",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_nonpending_cannot_be_decided_or_withdrawn (test_services.IntegrationTests.test_nonpending_cannot_be_decided_or_withdrawn)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-54",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_normalization_and_existing_optional_fields (test_services.ValidationTests.test_normalization_and_existing_optional_fields)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-55",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_pagination (test_officer.OfficerTests.test_pagination)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-56",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_private_bucket_is_accepted (test_hosted.DocumentTests.test_private_bucket_is_accepted)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-57",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_public_bucket_fails_closed (test_hosted.DocumentTests.test_public_bucket_fails_closed)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-58",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_public_configuration_fails_closed (test_citizen.DocumentTests.test_public_configuration_fails_closed)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-59",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_queue_summary_and_list_are_scoped_and_masked (test_officer.OfficerTests.test_queue_summary_and_list_are_scoped_and_masked)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-60",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_recent_pending_case_keeps_original_fifteen_day_cutoff (test_scheduler.SchedulerTests.test_recent_pending_case_keeps_original_fifteen_day_cutoff)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-61",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_rejected_and_withdrawn_can_reapply (test_services.IntegrationTests.test_rejected_and_withdrawn_can_reapply)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-62",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_rejection_with_reason (test_officer.OfficerTests.test_rejection_with_reason)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-63",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_required_fields (test_services.ValidationTests.test_required_fields)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-64",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_required_reason (test_officer.OfficerTests.test_required_reason)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-65",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_review_bound_to_actor_session (test_officer.OfficerTests.test_review_bound_to_actor_session)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-66",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_same_mobile_different_session_cannot_read_draft (test_citizen.CitizenTests.test_same_mobile_different_session_cannot_read_draft)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-67",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_signed_token_claims_and_expiry (test_citizen.CitizenTests.test_signed_token_claims_and_expiry)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-68",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_simultaneous_different_mobile_number_collision (test_services.IntegrationTests.test_simultaneous_different_mobile_number_collision)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-69",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_status_and_withdrawal_ownership (test_citizen.CitizenTests.test_status_and_withdrawal_ownership)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-70",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_storage_outage_blocks_submission_instead_of_claiming_document_exists (test_hosted.DocumentTests.test_storage_outage_blocks_submission_instead_of_claiming_document_exists)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-71",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_strict_signed_officer_token (test_officer.OfficerTests.test_strict_signed_officer_token)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-72",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_submission_and_ownership (test_services.IntegrationTests.test_submission_and_ownership)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-73",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_submission_audit_failure_rolls_back_everything (test_services.IntegrationTests.test_submission_audit_failure_rolls_back_everything)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-74",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_successful_submission_and_idempotent_retry (test_citizen.CitizenTests.test_successful_submission_and_idempotent_retry)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-75",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_two_competing_scheduler_runs_have_one_audit_and_notification (test_scheduler.SchedulerTests.test_two_competing_scheduler_runs_have_one_audit_and_notification)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-76",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_unsafe_paths_not_served (test_officer.OfficerTests.test_unsafe_paths_not_served)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-77",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_unsupported_block (test_citizen.CitizenTests.test_unsupported_block)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-78",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_unsupported_block_cannot_be_read_or_decided (test_officer.OfficerTests.test_unsupported_block_cannot_be_read_or_decided)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-79",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_upload_is_private_random_reference_without_mobile (test_hosted.DocumentTests.test_upload_is_private_random_reference_without_mobile)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-80",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_upload_limits (test_hosted.DocumentTests.test_upload_limits)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-81",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_upload_link_browser_ownership_and_expiry (test_citizen.CitizenTests.test_upload_link_browser_ownership_and_expiry)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-82",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_valid_pdf (test_citizen.DocumentTests.test_valid_pdf)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-83",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_valid_png_and_jpeg (test_citizen.DocumentTests.test_valid_png_and_jpeg)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-84",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_web_decision_requires_reason_and_ignores_forged_actor (test_services.IntegrationTests.test_web_decision_requires_reason_and_ignores_forged_actor)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-85",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_web_officer_boundary (test_services.IntegrationTests.test_web_officer_boundary)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-86",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_withdrawal_audit_failure_rolls_back (test_services.IntegrationTests.test_withdrawal_audit_failure_rolls_back)",
+      "status": "PASS"
+    },
+    {
+      "id": "suite-13-87",
+      "source_id": "suite-13",
+      "scope": "LOCAL",
+      "name": "test_withdrawal_race (test_officer.OfficerTests.test_withdrawal_race)",
+      "status": "PASS"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "submission",
+      "title": "Citizen application submission",
+      "category": "Citizen",
+      "scope": "LIVE",
+      "expected": "A verified citizen can prepare, upload, accept the current declaration and submit once.",
+      "actual": "Public SDK submission returned PENDING; SQL checked the authenticated owner and persisted case. Codex separately completed the Kamala workflow.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-20",
+        "suite-2-32"
+      ]
+    },
+    {
+      "id": "approval",
+      "title": "Officer approval and actor attribution",
+      "category": "Officer",
+      "scope": "LOCAL",
+      "expected": "Inspection and an exact confirmed reason produce one authenticated officer audit.",
+      "actual": "Local protocol checks passed. The real Codex approval of Kamala is separately documented below with database corroboration.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-3-26",
+        "suite-3-27"
+      ]
+    },
+    {
+      "id": "rejection",
+      "title": "Officer rejection with a mandatory reason",
+      "category": "Officer",
+      "scope": "LIVE",
+      "expected": "A blank reason is refused; confirmed rejection records the exact reason and authenticated actor.",
+      "actual": "Public rejection succeeded, the preview left the case pending, and the citizen saw REJECTED with the same reason.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-21",
+        "suite-7-22",
+        "suite-7-26",
+        "suite-7-28"
+      ]
+    },
+    {
+      "id": "withdrawal",
+      "title": "Citizen withdrawal",
+      "category": "Citizen",
+      "scope": "LIVE",
+      "expected": "Only the owner can withdraw a pending case after confirmation.",
+      "actual": "Public withdrawal changed the case to WITHDRAWN and recorded the authenticated citizen. A repeated withdrawal was rejected.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-34",
+        "suite-7-35",
+        "suite-7-36"
+      ]
+    },
+    {
+      "id": "eligibility",
+      "title": "Age, details and bank validation",
+      "category": "Citizen",
+      "scope": "LOCAL",
+      "expected": "Underage applicants and malformed required details cannot submit.",
+      "actual": "Local web, shared-service and MCP checks rejected underage, invalid DOB, bank and block inputs. No claim of a live natural-language eligibility interview.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-1-19",
+        "suite-1-21",
+        "suite-2-16"
+      ]
+    },
+    {
+      "id": "documents",
+      "title": "Private proof and declaration binding",
+      "category": "Citizen",
+      "scope": "MIXED",
+      "expected": "Missing proof prevents readiness; uploads require the OAuth browser, valid content and the current accepted revision.",
+      "actual": "Public proof/readiness checks passed. Local checks rejected copied links, CSRF failures, invalid PDFs, stale previews and non-boolean declarations.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-16",
+        "suite-7-29",
+        "suite-7-38",
+        "suite-2-21",
+        "suite-2-24",
+        "suite-2-28",
+        "suite-2-31"
+      ]
+    },
+    {
+      "id": "blocks",
+      "title": "Supported and unsupported blocks",
+      "category": "Security",
+      "scope": "MIXED",
+      "expected": "Agent operations are restricted to Sonari and Rajapara; filters cannot expand scope.",
+      "actual": "Public officer access to an unsupported block was denied. Local citizen preparation/submission for unsupported blocks was refused.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-50",
+        "suite-2-17",
+        "suite-2-19"
+      ]
+    },
+    {
+      "id": "oauth",
+      "title": "OAuth discovery, PKCE and tool separation",
+      "category": "Security",
+      "scope": "MIXED",
+      "expected": "The two resources expose separate tools and require appropriate OAuth identities.",
+      "actual": "Public SDK clients discovered five citizen tools and four officer tools. Both cross-role token attempts were rejected; local automatic discovery/PKCE checks passed.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-12",
+        "suite-7-13",
+        "suite-7-14",
+        "suite-7-15",
+        "suite-4-1"
+      ]
+    },
+    {
+      "id": "expiry",
+      "title": "Expired and revoked sessions",
+      "category": "Security",
+      "scope": "LIVE",
+      "expected": "Expired or revoked grants cannot access protected tools or refresh access.",
+      "actual": "Dedicated public test sessions were expired at the server and denied; real OAuth revocation also denied access and refresh for both roles. User Codex sessions were untouched.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-56",
+        "suite-7-69",
+        "suite-7-57",
+        "suite-7-70",
+        "suite-7-62",
+        "suite-7-75",
+        "suite-7-63",
+        "suite-7-76"
+      ]
+    },
+    {
+      "id": "ownership",
+      "title": "Citizen ownership boundaries",
+      "category": "Security",
+      "scope": "LIVE",
+      "expected": "Knowing another application ID must not grant authority over it.",
+      "actual": "The public synthetic identity could not withdraw the other citizen test case. Cross-role checks also denied access.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-49"
+      ]
+    },
+    {
+      "id": "shared",
+      "title": "Shared-session isolation and sign-out",
+      "category": "Security",
+      "scope": "LOCAL",
+      "expected": "Drafts belong to the sign-in session; ending it immediately blocks further access.",
+      "actual": "Local tests covered separate sessions for the same mobile, sign-out and immediate access/refresh revocation. This is protocol isolation, not a kiosk usability study.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-13-66",
+        "suite-2-41",
+        "suite-2-42"
+      ]
+    },
+    {
+      "id": "idempotency",
+      "title": "Duplicate submissions and idempotency",
+      "category": "Citizen",
+      "scope": "MIXED",
+      "expected": "Retries of the same accepted draft return the same case; active duplicates are blocked.",
+      "actual": "Public retry after rejection returned the original application. Local concurrent submission and database-constraint checks passed.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-27",
+        "suite-13-18",
+        "suite-13-27"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "Competing officer decisions",
+      "category": "Officer",
+      "scope": "LIVE",
+      "expected": "Two confirmations on one pending case produce exactly one decision and audit.",
+      "actual": "Two independently authenticated public SDK clients raced opposite decisions. REJECTED won; exactly one matching audit was verified.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-7-46",
+        "suite-7-47",
+        "suite-7-48"
+      ]
+    },
+    {
+      "id": "terminal",
+      "title": "Terminal decisions cannot be overwritten",
+      "category": "Officer",
+      "scope": "LOCAL",
+      "expected": "Approved, rejected, withdrawn and deemed-approved cases are terminal.",
+      "actual": "Local decision, replay, withdrawal-race and statutory-approval guards passed; the earlier Codex decision replay was also denied.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-3-28",
+        "suite-3-31",
+        "suite-3-33"
+      ]
+    },
+    {
+      "id": "scheduler",
+      "title": "15-day scheduler and repeat-run audit safety",
+      "category": "Reliability",
+      "scope": "MIXED",
+      "expected": "Only overdue pending cases transition; immediate repeat/race must not duplicate audit or notification.",
+      "actual": "Two fixed GitHub runs succeeded with unchanged hosted counts. Disposable-schema regressions reproduced then fixed duplicate audits and retained the original cutoff.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-12-1",
+        "suite-12-2",
+        "suite-12-4",
+        "suite-13-40",
+        "suite-13-60"
+      ]
+    },
+    {
+      "id": "persistence",
+      "title": "Hosted restart persistence",
+      "category": "Reliability",
+      "scope": "LIVE",
+      "expected": "Restarting the web service preserves records, private PDF bytes, audits and simulated messages.",
+      "actual": "After the operator restarted Render, synthetic case and document/audit hashes matched the baseline and a fresh SDK called a protected tool.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-8-1",
+        "suite-8-3",
+        "suite-8-6",
+        "suite-9-2"
+      ]
+    },
+    {
+      "id": "cold",
+      "title": "External MCP reconnect after idle",
+      "category": "Reliability",
+      "scope": "LIVE",
+      "expected": "An OAuth-authenticated external MCP client can reconnect after the free host is idle.",
+      "actual": "After 988.6 seconds of quiet, first response took 24.634 seconds; full protected SDK reconnect took 25.844 seconds, first attempt successful. This is behavioral evidence, not Render lifecycle telemetry.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-10-1",
+        "suite-10-2"
+      ]
+    },
+    {
+      "id": "public",
+      "title": "Public HTTPS, discovery and SMS privacy",
+      "category": "Security",
+      "scope": "LIVE",
+      "expected": "Public endpoints advertise the canonical issuer; protected MCP and SMS routes require authentication.",
+      "actual": "All eight public deployment probes passed, including both resource metadata checks and denial of unauthenticated SMS-inbox access.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-11-1",
+        "suite-11-3",
+        "suite-11-8"
+      ]
+    },
+    {
+      "id": "deadline",
+      "title": "Application deadline boundary",
+      "category": "Citizen",
+      "scope": "LOCAL",
+      "expected": "After the configured cutoff, submissions fail while follow-up remains possible.",
+      "actual": "Local tests patched only their test clock to verify the exact deadline and post-deadline behavior. Production clock and configuration were not changed.",
+      "status": "PASS",
+      "check_ids": [
+        "suite-13-19",
+        "suite-13-20"
+      ]
+    },
+    {
+      "id": "claude",
+      "title": "Evaluator’s Claude Code client",
+      "category": "Security",
+      "scope": "NOT TESTED",
+      "expected": "Repeat the workflow in the evaluator’s own client and small model.",
+      "actual": "NOT TESTED: Codex and the official Python SDK were used. Claude Code compatibility has not been directly verified.",
+      "status": "NOT TESTED",
+      "check_ids": []
+    },
+    {
+      "id": "language",
+      "title": "Multilingual or in-person kiosk usability",
+      "category": "Citizen",
+      "scope": "NOT TESTED",
+      "expected": "Observe elderly applicants, shared-phone helpers and informal local-language requests.",
+      "actual": "NOT TESTED: no field study, natural-language local-language run or physical kiosk accessibility study was performed.",
+      "status": "NOT TESTED",
+      "check_ids": []
+    },
+    {
+      "id": "wallclock",
+      "title": "Full-duration expiry and 30-day availability",
+      "category": "Reliability",
+      "scope": "NOT TESTED",
+      "expected": "Observe a full two/eight-hour session and an uninterrupted 30-day deployment.",
+      "actual": "NOT TESTED: expiry used dedicated server-side test fixtures; availability evidence is a restart and one measured post-idle reconnect, not a 30-day guarantee.",
+      "status": "NOT TESTED",
+      "check_ids": []
+    }
+  ],
+  "cases": [
+    {
+      "id": 100011,
+      "number": "SSP26495722",
+      "name": "Kamala Devi (Synthetic Test)",
+      "age": 70,
+      "village": "Synthetic Sonari Village",
+      "block": "Sonari",
+      "status": "APPROVED",
+      "mode": "Real Codex + human operator",
+      "voice": "Short English instructions and explicit confirmations typed by the operator; not a field interview.",
+      "goal": "Submit, review and follow up through separate citizen and officer assistants.",
+      "database_expectation": "One case, one SUBMIT audit and one confirmed APPROVED audit.",
+      "actual": "Verified through both MCP resources and read-only Supabase assertions."
+    },
+    {
+      "id": 100012,
+      "number": "SSP26545674",
+      "name": "Stage Five Rejection Synthetic Applicant",
+      "age": 76,
+      "village": "Synthetic Test Village",
+      "block": "Rajapara",
+      "status": "REJECTED",
+      "mode": "Scripted public SDK",
+      "voice": "Deterministic English tool inputs; no AI conversation claimed.",
+      "goal": "Reject fictional proof with a recorded reason.",
+      "database_expectation": "REJECTED, exactly one decision audit with authenticated actor and exact reason.",
+      "actual": "Public MCP and SQL assertions passed."
+    },
+    {
+      "id": 100013,
+      "number": "SSP26669481",
+      "name": "Stage Five Withdrawal Synthetic Applicant",
+      "age": 76,
+      "village": "Synthetic Test Village",
+      "block": "Rajapara",
+      "status": "WITHDRAWN",
+      "mode": "Scripted public SDK",
+      "voice": "Deterministic English tool inputs; no AI conversation claimed.",
+      "goal": "Withdraw a pending case only after confirmation.",
+      "database_expectation": "WITHDRAWN and one owner-attributed withdrawal audit.",
+      "actual": "Public MCP and SQL assertions passed."
+    },
+    {
+      "id": 100014,
+      "number": "SSP26635026",
+      "name": "Stage Five Competing Decisions Synthetic Applicant",
+      "age": 76,
+      "village": "Synthetic Test Village",
+      "block": "Rajapara",
+      "status": "REJECTED",
+      "mode": "Scripted public SDK",
+      "voice": "Two independent officer clients, not two invented chat transcripts.",
+      "goal": "Race opposing confirmations on one pending case.",
+      "database_expectation": "One winning terminal decision and exactly one corresponding audit.",
+      "actual": "REJECTED won; exactly one decision audit verified."
+    }
+  ],
+  "corroboration": [
+    {
+      "name": "submitted application matches authenticated synthetic citizen and block",
+      "status": "PASS",
+      "source": "stage5-real-citizen-results.jsonl"
+    },
+    {
+      "name": "exactly one submission audit with authenticated actor",
+      "status": "PASS",
+      "source": "stage5-real-citizen-results.jsonl"
+    },
+    {
+      "name": "draft revision 2 and declaration acceptance persisted",
+      "status": "PASS",
+      "source": "stage5-real-citizen-results.jsonl"
+    },
+    {
+      "name": "exactly one active application for test citizen",
+      "status": "PASS",
+      "source": "stage5-real-citizen-results.jsonl"
+    },
+    {
+      "name": "submitted age proof persists in private object storage",
+      "status": "PASS",
+      "source": "stage5-real-citizen-results.jsonl"
+    },
+    {
+      "name": "approval and authenticated officer persisted",
+      "status": "PASS",
+      "source": "stage5-real-officer-results.jsonl"
+    },
+    {
+      "name": "exactly one decision audit with confirmed reason and actor",
+      "status": "PASS",
+      "source": "stage5-real-officer-results.jsonl"
+    },
+    {
+      "name": "one active application remains after decision",
+      "status": "PASS",
+      "source": "stage5-real-officer-results.jsonl"
+    }
+  ],
+  "conversation": [
+    {
+      "kind": "Operator — verbatim excerpt",
+      "text": "Uploaded the PDF, please check the updated preview."
+    },
+    {
+      "kind": "Tool result — summary",
+      "text": "prepare_application returned revision 2, age proof present, ready to submit and no errors."
+    },
+    {
+      "kind": "Operator — verbatim excerpt",
+      "text": "I accept the declaration for this test application. Submit revision 2."
+    },
+    {
+      "kind": "Tool result — summary",
+      "text": "submit_application returned SSP26495722, PENDING. Owner-filtered follow-up and database assertions agreed."
+    },
+    {
+      "kind": "Operator — verbatim excerpt",
+      "text": "approve it , with a reason that sounds good"
+    },
+    {
+      "kind": "Decision preview — summary",
+      "text": "The assistant proposed APPROVED with a reason explicitly limited to a synthetic evaluation, not genuine eligibility or payment. The MCP required confirmation."
+    },
+    {
+      "kind": "Operator — verbatim excerpt",
+      "text": "Confirm this approval and reason."
+    },
+    {
+      "kind": "Tool result — summary",
+      "text": "The officer MCP recorded APPROVED using the authenticated actor; citizen follow-up showed the same status and reason. Exactly one decision audit was verified."
+    }
+  ],
+  "conversation_note": "Selected operator excerpts from the actual Codex session, paired with labeled tool summaries. This is not a complete transcript or a conversation generated for the SDK fixtures. Login, OTPs, credentials, private links and tokens are omitted.",
+  "learnings": [
+    {
+      "title": "Repeats must audit only this run’s changes",
+      "text": "Two scheduler regressions initially produced duplicate audits. UPDATE RETURNING now drives audit insertion in the same transaction; repeat and concurrent runs produce one audit."
+    },
+    {
+      "title": "Test isolation needs its own guard",
+      "text": "A test cleanup mistake reset local synthetic fixtures. Owned-mock cleanup and a current-schema guard fixed it; the local seed was restored. Hosted data was unaffected."
+    },
+    {
+      "title": "A free host needs patient clients",
+      "text": "A measured first post-idle reconnect took 25.844 seconds. Allow 60–120 seconds for client startup and retries; this is not an uptime guarantee."
+    }
+  ]
+}

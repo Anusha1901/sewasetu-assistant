@@ -1,0 +1,16 @@
+{"check": "synthetic applications persisted across restart", "passed": true}
+{"check": "uploaded proof files persisted across restart", "passed": true}
+{"check": "synthetic audit entries persisted", "passed": true}
+{"check": "scheduler updates persisted without additional changes", "passed": true}
+{"check": "scheduler audit did not duplicate on delayed restart", "passed": true}
+{"check": "OAuth clients persisted", "passed": true}
+{"check": "post-restart GET /", "passed": true}
+{"check": "post-restart GET /admin", "passed": true}
+{"check": "post-restart GET /__gateway/", "passed": true}
+{"check": "post-restart GET /.well-known/oauth-authorization-server", "passed": true}
+{"check": "post-restart GET /.well-known/jwks.json", "passed": true}
+{"check": "SMS gateway accepts fresh OTP after restart", "passed": true}
+{"check": "duplicate active application rejected", "passed": true}
+{"check": "duplicate attempt inserted no application", "passed": true}
+{"check": "final synthetic record count unchanged", "passed": true}
+{"summary": "persistence and duplicate checks passed"}

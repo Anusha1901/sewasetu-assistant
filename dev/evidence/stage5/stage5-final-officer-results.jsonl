@@ -1,0 +1,40 @@
+{"check": "officer MCP unauthenticated challenge", "passed": true}
+{"check": "separate officer resource metadata", "passed": true}
+{"check": "invalid officer bearer rejected", "passed": true}
+{"check": "exactly four officer tools via automatic OAuth discovery/DCR/PKCE", "passed": true}
+{"check": "officer token role subject scope and lifetimes", "passed": true}
+{"check": "officer token cannot access citizen server", "passed": true}
+{"check": "invalid officer browser origin denied", "passed": true}
+{"check": "citizen role denied officer MCP", "passed": true}
+{"check": "citizen scope denied officer MCP", "passed": true}
+{"check": "wrong audience denied officer MCP", "passed": true}
+{"check": "expired JWT rejected", "passed": true}
+{"check": "queue summary excludes unsupported blocks", "passed": true}
+{"check": "mobile search returns only permitted matching case", "passed": true}
+{"check": "queue response minimizes citizen PII", "passed": true}
+{"check": "unsupported block filter denied", "passed": true}
+{"check": "unsupported case inspection denied", "passed": true}
+{"check": "case inspection contains audit and masked details", "passed": true}
+{"check": "proof capability alone does not grant access", "passed": true}
+{"check": "authenticated officer browser downloads proof", "passed": true}
+{"check": "expired officer proof link denied", "passed": true}
+{"check": "blank reason rejected", "passed": true}
+{"check": "direct unpreviewed confirmation denied", "passed": true}
+{"check": "decision proposal does not mutate application", "passed": true}
+{"check": "confirmation requires a real boolean", "passed": true}
+{"check": "confirmation bound to exact reason", "passed": true}
+{"check": "approval uses authenticated officer", "passed": true}
+{"check": "approval reason and actor persisted", "passed": true}
+{"check": "replayed decision cannot overwrite", "passed": true}
+{"check": "rejection recorded with reason", "passed": true}
+{"check": "competing MCP decisions have exactly one winner", "passed": true}
+{"check": "withdrawn case cannot be decided", "passed": true}
+{"check": "unchanged statutory job approves overdue fixture", "passed": true}
+{"check": "deemed approval cannot be overwritten", "passed": true}
+{"check": "MCP decision visible in officer web portal", "passed": true}
+{"check": "officer browser sign-out", "passed": true}
+{"check": "officer access immediately revoked after sign-out", "passed": true}
+{"check": "second officer client connects independently", "passed": true}
+{"check": "officer refresh rotates within fixed session", "passed": true}
+{"check": "OAuth revocation immediately denies officer access", "passed": true}
+{"summary": {"passed": 39, "failed": 0}, "synthetic_application_ids": [100011, 100012, 100013, 100014, 100015, 100016]}
