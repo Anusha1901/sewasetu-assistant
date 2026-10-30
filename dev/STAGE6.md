@@ -1,6 +1,6 @@
 # Stage 6 — public evaluation dashboard
 
-Status: implementation and local checks complete; public deployment verification pending.
+Status: COMPLETE, 30 October 2026. Stop here pending approval for final submission assets.
 Target URL: https://sewasetu-assistant-wgcq.onrender.com/eval-dashboard
 
 ## Assignment-first scope
@@ -27,6 +27,11 @@ retroactively invent field-study personas, or label local checks as live public 
   byte-exact JSON export. Displayed SHA-256 matches the exported file.
 - `dev/build_evaluation_evidence.py`: deterministic compiler validates source results,
   counts, assertion references, privacy patterns and saved synthetic DB outcomes.
+  Canonical UTF-8/LF output preserves the displayed digest across Windows and Linux.
+- `dev/verify_stage6_reproducibility.py`: rebuilds from only the compiler and committed
+  evidence in an isolated directory, without deployment credentials or private snapshots.
+- `dev/archive_stage6_results.py` and `dev/evidence/stage6/results.json`: reviewed Stage 6
+  assertion outcomes and source digests, excluding raw MCP responses or private links.
 - `dev/evidence/stage5/`: reviewed raw assertion artifacts plus a narrow four-case DB
   attestation. Kept in the PRIVATE repo so evaluators can reproduce the snapshot without
   accessing live credentials. `.gitattributes` preserves checksummed bytes across platforms.
@@ -70,7 +75,7 @@ The page sets no authentication cookie and never reads the user's existing ident
 No background traffic keeps Render artificially awake. Source digests identify evidence
 files; they are not a signature or third-party attestation.
 
-## Verification to date
+## Final verification
 
 - 107 unit/integration cases passed, including 20 new dashboard contract/privacy tests.
 - 38 headless-browser checks passed locally at 1440px desktop, 768px tablet, 390px mobile.
@@ -78,17 +83,49 @@ files; they are not a signature or third-party attestation.
   keyboard skip link, layout overflow and absence of third-party requests were checked.
 - Desktop/mobile screenshots visually inspected; no clipping or horizontal overflow.
 - Existing local officer protocol suite: 39 passed; portal suite: 76 passed; citizen MCP
-  suite: 45 passed. Automatic OAuth, adapter and persistence checks are recorded below
-  when completed. Stage 5 source artifacts are frozen; new logs use stage6-* names.
+  suite: 45 passed; automatic SDK OAuth: 3 passed; hosted adapters: 10 passed;
+  post-restart local persistence and duplicate protection: 15 passed.
+- Independent evidence reproduction: 1 passed.
+- Public dashboard HTTP, privacy and evidence checks: 20 passed.
+- Public headless-browser checks: 38 passed at the same three viewport sizes; desktop
+  and mobile screenshots visually inspected. No clipping, overflow or third-party requests.
+- Public portal/OAuth/resource discovery/MCP authentication-boundary probes: 8 passed.
+- Real authenticated Codex citizen get_scheme_info and officer get_queue_summary: 2
+  passed after deployment. Only outcome booleans were archived, never session-finish URLs.
+- **402 final checks passed, zero final failures**: 295 local regression assertions,
+  38 local browser checks, 1 reproducibility assertion, 20 public dashboard checks,
+  38 public browser checks, 8 public probes, 2 real-client checks. The repeated 20-case
+  release-only suite is not counted again. The final 107-case unittest run enabled
+  RUN_DB_TESTS=1, passed with no skips. Stage 5 logs and public 376-check snapshot are frozen.
 - Production Docker build passed. No dependency changes.
 
 ## Public deployment
 
-Pending operator Manual Deploy → Deploy latest commit on the existing Render Free service.
-No new hosting resources, credentials or paid plan changes are required. Final public
-verification will compare the served export byte-for-byte with the reviewed artifact,
-test privacy headers and read-only behavior, render three viewport sizes, rerun public
-OAuth/MCP discovery probes, and call both configured MCP resources.
+Operator manually deployed commit 53a093e on the existing Render Free service and
+confirmed Live. Public verification completed against:
+
+- https://sewasetu-assistant-wgcq.onrender.com/eval-dashboard — HTTP 200 without login.
+- https://sewasetu-assistant-wgcq.onrender.com/eval-dashboard/evidence.json — reviewed,
+  sanitized snapshot; exact served bytes match the displayed SHA-256 and local bundle.
+- https://sewasetu-assistant-wgcq.onrender.com/mcp/citizen — authenticated real-client
+  scheme lookup works; unauthenticated calls denied with OAuth discovery advertised.
+- https://sewasetu-assistant-wgcq.onrender.com/mcp/officer — authenticated real-client
+  permitted queue works; unauthenticated calls denied with OAuth discovery advertised.
+
+No new resources, credentials, paid plans or public DB administration endpoints.
+Production code changes are limited to dashboard files, Blueprint registration and the
+portal footer link. MCP/OAuth/shared-services/scheduler behavior was not changed.
+Compiler line-ending and documentation follow-ups do not alter the deployed runtime.
+
+Local restart retained six Stage One synthetic applications and their proofs/audits,
+70 OAuth clients, and 9702 deemed approvals with 9702 matching audits. All 100000 seed
+rows remain. Stage 6 did not submit or decide any new public application. Stage 5's
+hosted restart, scheduler execution and cold-start evidence is historical evidence, not
+misrepresented as a new Stage 6 repeat of those scenarios.
+
+Tests live in app/tests/test_evaluation.py and dev/verify_stage6_{public,reproducibility}.py,
+dev/verify_stage6_browser.cjs. Archived sanitized results: dev/evidence/stage6/results.json.
+Browser screenshots are local ignored artifacts under output/stage6/.
 
 ## Limitations and remaining submission tasks
 

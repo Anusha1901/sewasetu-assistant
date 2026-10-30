@@ -1,0 +1,1694 @@
+{
+  "date": "2026-10-30",
+  "total_passed": 402,
+  "failed": 0,
+  "note": "Stage 6 rerun assertions; not added to the historical Stage 5 public snapshot.",
+  "sources": [
+    {
+      "source": "stage6-main-results.jsonl",
+      "sha256": "ddf82ad17dbfb52c436cb2322a4d69c5beb4358d9c5d76a65a3388d5fd0e54d2",
+      "checks": [
+        {
+          "check": "Postgres SELECT 1",
+          "passed": true
+        },
+        {
+          "check": "GET /",
+          "passed": true
+        },
+        {
+          "check": "GET /about",
+          "passed": true
+        },
+        {
+          "check": "GET /apply",
+          "passed": true
+        },
+        {
+          "check": "GET /status",
+          "passed": true
+        },
+        {
+          "check": "GET /admin",
+          "passed": true
+        },
+        {
+          "check": "GET /__gateway/",
+          "passed": true
+        },
+        {
+          "check": "OAuth discovery",
+          "passed": true
+        },
+        {
+          "check": "JWKS available",
+          "passed": true
+        },
+        {
+          "check": "anonymous officer dashboard denied",
+          "passed": true
+        },
+        {
+          "check": "wrong officer password rejected",
+          "passed": true
+        },
+        {
+          "check": "officer dashboard login",
+          "passed": true
+        },
+        {
+          "check": "captcha form loads",
+          "passed": true
+        },
+        {
+          "check": "OTP sent through portal",
+          "passed": true
+        },
+        {
+          "check": "invalid OTP rejected",
+          "passed": true
+        },
+        {
+          "check": "delivered OTP accepted",
+          "passed": true
+        },
+        {
+          "check": "missing proof rejected in preview",
+          "passed": true
+        },
+        {
+          "check": "PDF upload and declaration preview",
+          "passed": true
+        },
+        {
+          "check": "underage submission rejected",
+          "passed": true
+        },
+        {
+          "check": "invalid block submission rejected",
+          "passed": true
+        },
+        {
+          "check": "invalid bank submission rejected",
+          "passed": true
+        },
+        {
+          "check": "submission persisted and confirmation rendered",
+          "passed": true
+        },
+        {
+          "check": "uploaded document exists",
+          "passed": true
+        },
+        {
+          "check": "submit audit exists",
+          "passed": true
+        },
+        {
+          "check": "own application readable",
+          "passed": true
+        },
+        {
+          "check": "acknowledgment PDF",
+          "passed": true
+        },
+        {
+          "check": "DOB status login",
+          "passed": true
+        },
+        {
+          "check": "other citizen record denied",
+          "passed": true
+        },
+        {
+          "check": "other citizen acknowledgment denied",
+          "passed": true
+        },
+        {
+          "check": "officer /admin/applications",
+          "passed": true
+        },
+        {
+          "check": "officer /admin/applications",
+          "passed": true
+        },
+        {
+          "check": "officer /admin/application/100027",
+          "passed": true
+        },
+        {
+          "check": "officer approval persisted",
+          "passed": true
+        },
+        {
+          "check": "approval reason and actor audited",
+          "passed": true
+        },
+        {
+          "check": "captcha form loads",
+          "passed": true
+        },
+        {
+          "check": "OTP sent through portal",
+          "passed": true
+        },
+        {
+          "check": "invalid OTP rejected",
+          "passed": true
+        },
+        {
+          "check": "delivered OTP accepted",
+          "passed": true
+        },
+        {
+          "check": "PDF upload and declaration preview",
+          "passed": true
+        },
+        {
+          "check": "submission persisted and confirmation rendered",
+          "passed": true
+        },
+        {
+          "check": "uploaded document exists",
+          "passed": true
+        },
+        {
+          "check": "submit audit exists",
+          "passed": true
+        },
+        {
+          "check": "pending withdrawal persisted and audited",
+          "passed": true
+        },
+        {
+          "check": "captcha form loads",
+          "passed": true
+        },
+        {
+          "check": "OTP sent through portal",
+          "passed": true
+        },
+        {
+          "check": "invalid OTP rejected",
+          "passed": true
+        },
+        {
+          "check": "delivered OTP accepted",
+          "passed": true
+        },
+        {
+          "check": "PDF upload and declaration preview",
+          "passed": true
+        },
+        {
+          "check": "submission persisted and confirmation rendered",
+          "passed": true
+        },
+        {
+          "check": "uploaded document exists",
+          "passed": true
+        },
+        {
+          "check": "submit audit exists",
+          "passed": true
+        },
+        {
+          "check": "officer rejection persisted and audited",
+          "passed": true
+        },
+        {
+          "check": "citizen OAuth client registration",
+          "passed": true
+        },
+        {
+          "check": "citizen OAuth login page",
+          "passed": true
+        },
+        {
+          "check": "citizen OAuth consent reached",
+          "passed": true
+        },
+        {
+          "check": "citizen OAuth state returned",
+          "passed": true
+        },
+        {
+          "check": "citizen OAuth token exchange",
+          "passed": true
+        },
+        {
+          "check": "citizen JWT signature, issuer, audience, role, subject",
+          "passed": true
+        },
+        {
+          "check": "citizen access lifetime bounded",
+          "passed": true
+        },
+        {
+          "check": "citizen authorization code single use",
+          "passed": true
+        },
+        {
+          "check": "citizen refresh rotation and fixed session end",
+          "passed": true
+        },
+        {
+          "check": "citizen old refresh rejected",
+          "passed": true
+        },
+        {
+          "check": "citizen revoke endpoint",
+          "passed": true
+        },
+        {
+          "check": "citizen revoked refresh rejected",
+          "passed": true
+        },
+        {
+          "check": "officer OAuth client registration",
+          "passed": true
+        },
+        {
+          "check": "officer OAuth login page",
+          "passed": true
+        },
+        {
+          "check": "officer OAuth consent reached",
+          "passed": true
+        },
+        {
+          "check": "officer OAuth state returned",
+          "passed": true
+        },
+        {
+          "check": "officer OAuth token exchange",
+          "passed": true
+        },
+        {
+          "check": "officer JWT signature, issuer, audience, role, subject",
+          "passed": true
+        },
+        {
+          "check": "officer access lifetime bounded",
+          "passed": true
+        },
+        {
+          "check": "officer authorization code single use",
+          "passed": true
+        },
+        {
+          "check": "officer refresh rotation and fixed session end",
+          "passed": true
+        },
+        {
+          "check": "officer old refresh rejected",
+          "passed": true
+        },
+        {
+          "check": "officer revoke endpoint",
+          "passed": true
+        },
+        {
+          "check": "officer revoked refresh rejected",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-citizen-results.jsonl",
+      "sha256": "8929d39d5690b1dd9bade8f1c55693abff0f86ccb216d30cc2a73d1d582c501f",
+      "checks": [
+        {
+          "check": "unauthenticated MCP challenge",
+          "passed": true
+        },
+        {
+          "check": "canonical protected resource discovery",
+          "passed": true
+        },
+        {
+          "check": "invalid bearer rejected",
+          "passed": true
+        },
+        {
+          "check": "citizen browser reaches consent",
+          "passed": true
+        },
+        {
+          "check": "citizen token exchange",
+          "passed": true
+        },
+        {
+          "check": "untrusted browser origin rejected",
+          "passed": true
+        },
+        {
+          "check": "officer browser reaches consent",
+          "passed": true
+        },
+        {
+          "check": "officer token exchange",
+          "passed": true
+        },
+        {
+          "check": "officer token denied citizen MCP",
+          "passed": true
+        },
+        {
+          "check": "citizen browser reaches consent",
+          "passed": true
+        },
+        {
+          "check": "citizen token exchange",
+          "passed": true
+        },
+        {
+          "check": "wrong audience denied",
+          "passed": true
+        },
+        {
+          "check": "officer MCP remains inaccessible without officer authentication",
+          "passed": true
+        },
+        {
+          "check": "exactly five citizen tools",
+          "passed": true
+        },
+        {
+          "check": "scheme info uses configured rules",
+          "passed": true
+        },
+        {
+          "check": "invalid application returns errors",
+          "passed": true
+        },
+        {
+          "check": "unsupported block rejected in preparation",
+          "passed": true
+        },
+        {
+          "check": "unsupported block browser upload denied",
+          "passed": true
+        },
+        {
+          "check": "unsupported block rejected on submit",
+          "passed": true
+        },
+        {
+          "check": "no proof prevents readiness",
+          "passed": true
+        },
+        {
+          "check": "upload link alone is not identity",
+          "passed": true
+        },
+        {
+          "check": "expired upload link rejected",
+          "passed": true
+        },
+        {
+          "check": "matching OAuth browser can open upload",
+          "passed": true
+        },
+        {
+          "check": "upload CSRF rejected",
+          "passed": true
+        },
+        {
+          "check": "invalid PDF content rejected",
+          "passed": true
+        },
+        {
+          "check": "valid browser upload succeeds",
+          "passed": true
+        },
+        {
+          "check": "upload link is single use",
+          "passed": true
+        },
+        {
+          "check": "stale document preview rejected",
+          "passed": true
+        },
+        {
+          "check": "uploaded proof reflected in current preview",
+          "passed": true
+        },
+        {
+          "check": "explicit declaration required",
+          "passed": true
+        },
+        {
+          "check": "declaration must be a real boolean",
+          "passed": true
+        },
+        {
+          "check": "MCP submission persisted",
+          "passed": true
+        },
+        {
+          "check": "duplicate retry returns same application",
+          "passed": true
+        },
+        {
+          "check": "one application and one submit audit",
+          "passed": true
+        },
+        {
+          "check": "browser acknowledgment download",
+          "passed": true
+        },
+        {
+          "check": "own application history only",
+          "passed": true
+        },
+        {
+          "check": "other citizen withdrawal denied",
+          "passed": true
+        },
+        {
+          "check": "withdrawal requires confirmation",
+          "passed": true
+        },
+        {
+          "check": "MCP withdrawal persisted with audit",
+          "passed": true
+        },
+        {
+          "check": "browser sign-out succeeds",
+          "passed": true
+        },
+        {
+          "check": "signed-out access token immediately rejected",
+          "passed": true
+        },
+        {
+          "check": "signed-out refresh rejected",
+          "passed": true
+        },
+        {
+          "check": "citizen browser reaches consent",
+          "passed": true
+        },
+        {
+          "check": "citizen token exchange",
+          "passed": true
+        },
+        {
+          "check": "expired server session rejected",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-officer-results.jsonl",
+      "sha256": "ea07379f09026811fabd9aa9a47fd102b35953a34843fd0fee4ef1f40f341223",
+      "checks": [
+        {
+          "check": "officer MCP unauthenticated challenge",
+          "passed": true
+        },
+        {
+          "check": "separate officer resource metadata",
+          "passed": true
+        },
+        {
+          "check": "invalid officer bearer rejected",
+          "passed": true
+        },
+        {
+          "check": "exactly four officer tools via automatic OAuth discovery/DCR/PKCE",
+          "passed": true
+        },
+        {
+          "check": "officer token role subject scope and lifetimes",
+          "passed": true
+        },
+        {
+          "check": "officer token cannot access citizen server",
+          "passed": true
+        },
+        {
+          "check": "invalid officer browser origin denied",
+          "passed": true
+        },
+        {
+          "check": "citizen role denied officer MCP",
+          "passed": true
+        },
+        {
+          "check": "citizen scope denied officer MCP",
+          "passed": true
+        },
+        {
+          "check": "wrong audience denied officer MCP",
+          "passed": true
+        },
+        {
+          "check": "expired JWT rejected",
+          "passed": true
+        },
+        {
+          "check": "queue summary excludes unsupported blocks",
+          "passed": true
+        },
+        {
+          "check": "mobile search returns only permitted matching case",
+          "passed": true
+        },
+        {
+          "check": "queue response minimizes citizen PII",
+          "passed": true
+        },
+        {
+          "check": "unsupported block filter denied",
+          "passed": true
+        },
+        {
+          "check": "unsupported case inspection denied",
+          "passed": true
+        },
+        {
+          "check": "case inspection contains audit and masked details",
+          "passed": true
+        },
+        {
+          "check": "proof capability alone does not grant access",
+          "passed": true
+        },
+        {
+          "check": "authenticated officer browser downloads proof",
+          "passed": true
+        },
+        {
+          "check": "expired officer proof link denied",
+          "passed": true
+        },
+        {
+          "check": "blank reason rejected",
+          "passed": true
+        },
+        {
+          "check": "direct unpreviewed confirmation denied",
+          "passed": true
+        },
+        {
+          "check": "decision proposal does not mutate application",
+          "passed": true
+        },
+        {
+          "check": "confirmation requires a real boolean",
+          "passed": true
+        },
+        {
+          "check": "confirmation bound to exact reason",
+          "passed": true
+        },
+        {
+          "check": "approval uses authenticated officer",
+          "passed": true
+        },
+        {
+          "check": "approval reason and actor persisted",
+          "passed": true
+        },
+        {
+          "check": "replayed decision cannot overwrite",
+          "passed": true
+        },
+        {
+          "check": "rejection recorded with reason",
+          "passed": true
+        },
+        {
+          "check": "competing MCP decisions have exactly one winner",
+          "passed": true
+        },
+        {
+          "check": "withdrawn case cannot be decided",
+          "passed": true
+        },
+        {
+          "check": "unchanged statutory job approves overdue fixture",
+          "passed": true
+        },
+        {
+          "check": "deemed approval cannot be overwritten",
+          "passed": true
+        },
+        {
+          "check": "MCP decision visible in officer web portal",
+          "passed": true
+        },
+        {
+          "check": "officer browser sign-out",
+          "passed": true
+        },
+        {
+          "check": "officer access immediately revoked after sign-out",
+          "passed": true
+        },
+        {
+          "check": "second officer client connects independently",
+          "passed": true
+        },
+        {
+          "check": "officer refresh rotates within fixed session",
+          "passed": true
+        },
+        {
+          "check": "OAuth revocation immediately denies officer access",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-citizen-oauth-results.jsonl",
+      "sha256": "7b2d05c75a495331300de318874f18f8a86c2a6be011eae05598ab1ab05bd343",
+      "checks": [
+        {
+          "check": "official SDK automatic resource/AS discovery, registration, PKCE and tool call",
+          "passed": true
+        },
+        {
+          "check": "rotated citizen token retains active MCP session",
+          "passed": true
+        },
+        {
+          "check": "OAuth revocation immediately denies citizen access token",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-persistence-results.jsonl",
+      "sha256": "a0a8ff4545e0d30691a610d8e2449661581132bcf13673d98a032c70e589f54c",
+      "checks": [
+        {
+          "check": "synthetic applications persisted across restart",
+          "passed": true
+        },
+        {
+          "check": "uploaded proof files persisted across restart",
+          "passed": true
+        },
+        {
+          "check": "synthetic audit entries persisted",
+          "passed": true
+        },
+        {
+          "check": "scheduler updates persisted without additional changes",
+          "passed": true
+        },
+        {
+          "check": "scheduler audit did not duplicate on delayed restart",
+          "passed": true
+        },
+        {
+          "check": "OAuth clients persisted",
+          "passed": true
+        },
+        {
+          "check": "post-restart GET /",
+          "passed": true
+        },
+        {
+          "check": "post-restart GET /admin",
+          "passed": true
+        },
+        {
+          "check": "post-restart GET /__gateway/",
+          "passed": true
+        },
+        {
+          "check": "post-restart GET /.well-known/oauth-authorization-server",
+          "passed": true
+        },
+        {
+          "check": "post-restart GET /.well-known/jwks.json",
+          "passed": true
+        },
+        {
+          "check": "SMS gateway accepts fresh OTP after restart",
+          "passed": true
+        },
+        {
+          "check": "duplicate active application rejected",
+          "passed": true
+        },
+        {
+          "check": "duplicate attempt inserted no application",
+          "passed": true
+        },
+        {
+          "check": "final synthetic record count unchanged",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-hosted-adapter-results.jsonl",
+      "sha256": "9f15e6cb8e9aecf88a22219f99fba43f1b1e7258d3397cbaf02bc54c154ba88f",
+      "checks": [
+        {
+          "check": "original 100000-row seed imports into empty private schema",
+          "passed": true
+        },
+        {
+          "check": "portal tables stay outside public schema",
+          "passed": true
+        },
+        {
+          "check": "PUBLIC has no private-schema privileges",
+          "passed": true
+        },
+        {
+          "check": "repeated seed import refuses to overwrite records",
+          "passed": true
+        },
+        {
+          "check": "persistent simulator accepts synthetic notification",
+          "passed": true
+        },
+        {
+          "check": "simulator process reload preserves queued notification",
+          "passed": true
+        },
+        {
+          "check": "simulator recipient filter excludes other recipients",
+          "passed": true
+        },
+        {
+          "check": "simulator never returns an undelivered OTP as plaintext",
+          "passed": true
+        },
+        {
+          "check": "delivered notification remains readable after restart",
+          "passed": true
+        },
+        {
+          "check": "simulator tests preserve all seeded applications",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-local-browser-results.jsonl",
+      "sha256": "2ab212a0bf176da848ccf227a02bde4ed0ad8629e305d7e7d443af018da6c097",
+      "checks": [
+        {
+          "check": "public browser fetches evidence without authentication",
+          "passed": true
+        },
+        {
+          "check": "served evidence exactly matches reviewed bundle",
+          "passed": true
+        },
+        {
+          "check": "desktop dashboard loads and has the required heading",
+          "passed": true
+        },
+        {
+          "check": "desktop has no horizontal document overflow",
+          "passed": true
+        },
+        {
+          "check": "desktop displays both official endpoints",
+          "passed": true
+        },
+        {
+          "check": "desktop renders all evidence scenarios",
+          "passed": true
+        },
+        {
+          "check": "desktop keyboard reaches the visible skip link",
+          "passed": true
+        },
+        {
+          "check": "desktop scope filter shows exactly three untested scenarios",
+          "passed": true
+        },
+        {
+          "check": "desktop category and scope filters combine correctly",
+          "passed": true
+        },
+        {
+          "check": "desktop empty search result is announced",
+          "passed": true
+        },
+        {
+          "check": "desktop text search finds the competing-decision scenario",
+          "passed": true
+        },
+        {
+          "check": "desktop expanded scenario displays expected actual and evidence",
+          "passed": true
+        },
+        {
+          "check": "desktop raw assertion list expands without a network API",
+          "passed": true
+        },
+        {
+          "check": "desktop no page script errors or third-party requests",
+          "passed": true
+        },
+        {
+          "check": "tablet dashboard loads and has the required heading",
+          "passed": true
+        },
+        {
+          "check": "tablet has no horizontal document overflow",
+          "passed": true
+        },
+        {
+          "check": "tablet displays both official endpoints",
+          "passed": true
+        },
+        {
+          "check": "tablet renders all evidence scenarios",
+          "passed": true
+        },
+        {
+          "check": "tablet keyboard reaches the visible skip link",
+          "passed": true
+        },
+        {
+          "check": "tablet scope filter shows exactly three untested scenarios",
+          "passed": true
+        },
+        {
+          "check": "tablet category and scope filters combine correctly",
+          "passed": true
+        },
+        {
+          "check": "tablet empty search result is announced",
+          "passed": true
+        },
+        {
+          "check": "tablet text search finds the competing-decision scenario",
+          "passed": true
+        },
+        {
+          "check": "tablet expanded scenario displays expected actual and evidence",
+          "passed": true
+        },
+        {
+          "check": "tablet raw assertion list expands without a network API",
+          "passed": true
+        },
+        {
+          "check": "tablet no page script errors or third-party requests",
+          "passed": true
+        },
+        {
+          "check": "mobile dashboard loads and has the required heading",
+          "passed": true
+        },
+        {
+          "check": "mobile has no horizontal document overflow",
+          "passed": true
+        },
+        {
+          "check": "mobile displays both official endpoints",
+          "passed": true
+        },
+        {
+          "check": "mobile renders all evidence scenarios",
+          "passed": true
+        },
+        {
+          "check": "mobile keyboard reaches the visible skip link",
+          "passed": true
+        },
+        {
+          "check": "mobile scope filter shows exactly three untested scenarios",
+          "passed": true
+        },
+        {
+          "check": "mobile category and scope filters combine correctly",
+          "passed": true
+        },
+        {
+          "check": "mobile empty search result is announced",
+          "passed": true
+        },
+        {
+          "check": "mobile text search finds the competing-decision scenario",
+          "passed": true
+        },
+        {
+          "check": "mobile expanded scenario displays expected actual and evidence",
+          "passed": true
+        },
+        {
+          "check": "mobile raw assertion list expands without a network API",
+          "passed": true
+        },
+        {
+          "check": "mobile no page script errors or third-party requests",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-reproducibility-results.jsonl",
+      "sha256": "dd996d9e22a419fdc4ff960dc10bab2061f5ccf56cd4c58b0fcf8e52b272a350",
+      "checks": [
+        {
+          "check": "public snapshot reproduces byte-exactly without credentials or private snapshots",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-public-dashboard-results.jsonl",
+      "sha256": "1daad7e02f4b6757ccca771063b09d8c48f3fe6c5fe391bfc0a8451b5be51797",
+      "checks": [
+        {
+          "check": "dashboard is publicly accessible without a cookie or token",
+          "passed": true
+        },
+        {
+          "check": "public sanitized evidence export returns JSON",
+          "passed": true
+        },
+        {
+          "check": "deployed evidence equals the reviewed local snapshot",
+          "passed": true
+        },
+        {
+          "check": "download bytes match the displayed snapshot digest",
+          "passed": true
+        },
+        {
+          "check": "summary remains the historical 376-check baseline",
+          "passed": true
+        },
+        {
+          "check": "local and live results are separately labeled",
+          "passed": true
+        },
+        {
+          "check": "all untested scenarios remain labeled not tested",
+          "passed": true
+        },
+        {
+          "check": "real Codex excerpts are distinguished from SDK fixtures",
+          "passed": true
+        },
+        {
+          "check": "no OTPs tokens passwords banks or document paths are exported as fields",
+          "passed": true
+        },
+        {
+          "check": "no private capability URLs are exported",
+          "passed": true
+        },
+        {
+          "check": "no full telephone numbers appear in public evidence",
+          "passed": true
+        },
+        {
+          "check": "real deployment secrets are absent from public responses",
+          "passed": true
+        },
+        {
+          "check": "evidence query cannot select other files or records",
+          "passed": true
+        },
+        {
+          "check": "dashboard and export reject state-changing POST requests",
+          "passed": true
+        },
+        {
+          "check": "dashboard creates no authentication cookies",
+          "passed": true
+        },
+        {
+          "check": "dashboard has restrictive script connection and frame policy",
+          "passed": true
+        },
+        {
+          "check": "public responses prevent MIME sniffing and referrer leakage",
+          "passed": true
+        },
+        {
+          "check": "self-hosted stylesheet and script load",
+          "passed": true
+        },
+        {
+          "check": "the existing portal links to the evaluation dashboard",
+          "passed": true
+        },
+        {
+          "check": "scheme deadline and statutory SLA are unchanged on the dashboard",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-public-browser-results.jsonl",
+      "sha256": "2e95fd43527bef7a1868342698a6537b07eacc91c74dbb17dbdc328f313c42b6",
+      "checks": [
+        {
+          "check": "public browser fetches evidence without authentication",
+          "passed": true
+        },
+        {
+          "check": "served evidence exactly matches reviewed bundle",
+          "passed": true
+        },
+        {
+          "check": "desktop dashboard loads and has the required heading",
+          "passed": true
+        },
+        {
+          "check": "desktop has no horizontal document overflow",
+          "passed": true
+        },
+        {
+          "check": "desktop displays both official endpoints",
+          "passed": true
+        },
+        {
+          "check": "desktop renders all evidence scenarios",
+          "passed": true
+        },
+        {
+          "check": "desktop keyboard reaches the visible skip link",
+          "passed": true
+        },
+        {
+          "check": "desktop scope filter shows exactly three untested scenarios",
+          "passed": true
+        },
+        {
+          "check": "desktop category and scope filters combine correctly",
+          "passed": true
+        },
+        {
+          "check": "desktop empty search result is announced",
+          "passed": true
+        },
+        {
+          "check": "desktop text search finds the competing-decision scenario",
+          "passed": true
+        },
+        {
+          "check": "desktop expanded scenario displays expected actual and evidence",
+          "passed": true
+        },
+        {
+          "check": "desktop raw assertion list expands without a network API",
+          "passed": true
+        },
+        {
+          "check": "desktop no page script errors or third-party requests",
+          "passed": true
+        },
+        {
+          "check": "tablet dashboard loads and has the required heading",
+          "passed": true
+        },
+        {
+          "check": "tablet has no horizontal document overflow",
+          "passed": true
+        },
+        {
+          "check": "tablet displays both official endpoints",
+          "passed": true
+        },
+        {
+          "check": "tablet renders all evidence scenarios",
+          "passed": true
+        },
+        {
+          "check": "tablet keyboard reaches the visible skip link",
+          "passed": true
+        },
+        {
+          "check": "tablet scope filter shows exactly three untested scenarios",
+          "passed": true
+        },
+        {
+          "check": "tablet category and scope filters combine correctly",
+          "passed": true
+        },
+        {
+          "check": "tablet empty search result is announced",
+          "passed": true
+        },
+        {
+          "check": "tablet text search finds the competing-decision scenario",
+          "passed": true
+        },
+        {
+          "check": "tablet expanded scenario displays expected actual and evidence",
+          "passed": true
+        },
+        {
+          "check": "tablet raw assertion list expands without a network API",
+          "passed": true
+        },
+        {
+          "check": "tablet no page script errors or third-party requests",
+          "passed": true
+        },
+        {
+          "check": "mobile dashboard loads and has the required heading",
+          "passed": true
+        },
+        {
+          "check": "mobile has no horizontal document overflow",
+          "passed": true
+        },
+        {
+          "check": "mobile displays both official endpoints",
+          "passed": true
+        },
+        {
+          "check": "mobile renders all evidence scenarios",
+          "passed": true
+        },
+        {
+          "check": "mobile keyboard reaches the visible skip link",
+          "passed": true
+        },
+        {
+          "check": "mobile scope filter shows exactly three untested scenarios",
+          "passed": true
+        },
+        {
+          "check": "mobile category and scope filters combine correctly",
+          "passed": true
+        },
+        {
+          "check": "mobile empty search result is announced",
+          "passed": true
+        },
+        {
+          "check": "mobile text search finds the competing-decision scenario",
+          "passed": true
+        },
+        {
+          "check": "mobile expanded scenario displays expected actual and evidence",
+          "passed": true
+        },
+        {
+          "check": "mobile raw assertion list expands without a network API",
+          "passed": true
+        },
+        {
+          "check": "mobile no page script errors or third-party requests",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-public-mcp-probe-results.jsonl",
+      "sha256": "45820e2bca2f2a5112df1a785a8e075fda9c7359a26ae297e27f758a2f7bf0cb",
+      "checks": [
+        {
+          "check": "portal TLS and homepage",
+          "passed": true
+        },
+        {
+          "check": "database readiness",
+          "passed": true
+        },
+        {
+          "check": "canonical OAuth issuer and redirect discovery",
+          "passed": true
+        },
+        {
+          "check": "citizen denies missing credentials and advertises discovery",
+          "passed": true
+        },
+        {
+          "check": "citizen canonical resource scope issuer",
+          "passed": true
+        },
+        {
+          "check": "officer denies missing credentials and advertises discovery",
+          "passed": true
+        },
+        {
+          "check": "officer canonical resource scope issuer",
+          "passed": true
+        },
+        {
+          "check": "SMS inbox is not public",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-real-client-results.jsonl",
+      "sha256": "22061d6943b83df18080c24da56f1a0f4b85e1d68ba08482be778ee21736d8e5",
+      "checks": [
+        {
+          "check": "real Codex citizen MCP authenticated read succeeds after dashboard deployment",
+          "passed": true
+        },
+        {
+          "check": "real Codex officer MCP authenticated queue succeeds after dashboard deployment",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "source": "stage6-unit-integration.txt",
+      "sha256": "2fb0a07dd8b43291d1bfcba58c48ed60b7b0f599fa019864a4d184ab8ca9d385",
+      "checks": [
+        {
+          "check": "test_changed_allowlist_blocks_existing_draft (test_citizen.CitizenTests.test_changed_allowlist_blocks_existing_draft)",
+          "passed": true
+        },
+        {
+          "check": "test_concurrent_initial_signing_keys (test_citizen.CitizenTests.test_concurrent_initial_signing_keys)",
+          "passed": true
+        },
+        {
+          "check": "test_concurrent_same_draft_retries (test_citizen.CitizenTests.test_concurrent_same_draft_retries)",
+          "passed": true
+        },
+        {
+          "check": "test_declaration_required_and_stale_preview (test_citizen.CitizenTests.test_declaration_required_and_stale_preview)",
+          "passed": true
+        },
+        {
+          "check": "test_different_draft_duplicate_submission (test_citizen.CitizenTests.test_different_draft_duplicate_submission)",
+          "passed": true
+        },
+        {
+          "check": "test_expired_and_revoked_sessions (test_citizen.CitizenTests.test_expired_and_revoked_sessions)",
+          "passed": true
+        },
+        {
+          "check": "test_expired_draft (test_citizen.CitizenTests.test_expired_draft)",
+          "passed": true
+        },
+        {
+          "check": "test_failed_shared_submission_does_not_mark_draft (test_citizen.CitizenTests.test_failed_shared_submission_does_not_mark_draft)",
+          "passed": true
+        },
+        {
+          "check": "test_invalid_details (test_citizen.CitizenTests.test_invalid_details)",
+          "passed": true
+        },
+        {
+          "check": "test_missing_document (test_citizen.CitizenTests.test_missing_document)",
+          "passed": true
+        },
+        {
+          "check": "test_same_mobile_different_session_cannot_read_draft (test_citizen.CitizenTests.test_same_mobile_different_session_cannot_read_draft)",
+          "passed": true
+        },
+        {
+          "check": "test_signed_token_claims_and_expiry (test_citizen.CitizenTests.test_signed_token_claims_and_expiry)",
+          "passed": true
+        },
+        {
+          "check": "test_status_and_withdrawal_ownership (test_citizen.CitizenTests.test_status_and_withdrawal_ownership)",
+          "passed": true
+        },
+        {
+          "check": "test_successful_submission_and_idempotent_retry (test_citizen.CitizenTests.test_successful_submission_and_idempotent_retry)",
+          "passed": true
+        },
+        {
+          "check": "test_unsupported_block (test_citizen.CitizenTests.test_unsupported_block)",
+          "passed": true
+        },
+        {
+          "check": "test_upload_link_browser_ownership_and_expiry (test_citizen.CitizenTests.test_upload_link_browser_ownership_and_expiry)",
+          "passed": true
+        },
+        {
+          "check": "test_invalid_allowlist_fails_closed (test_citizen.DocumentTests.test_invalid_allowlist_fails_closed)",
+          "passed": true
+        },
+        {
+          "check": "test_invalid_empty_oversize_and_extension (test_citizen.DocumentTests.test_invalid_empty_oversize_and_extension)",
+          "passed": true
+        },
+        {
+          "check": "test_public_configuration_fails_closed (test_citizen.DocumentTests.test_public_configuration_fails_closed)",
+          "passed": true
+        },
+        {
+          "check": "test_valid_pdf (test_citizen.DocumentTests.test_valid_pdf)",
+          "passed": true
+        },
+        {
+          "check": "test_valid_png_and_jpeg (test_citizen.DocumentTests.test_valid_png_and_jpeg)",
+          "passed": true
+        },
+        {
+          "check": "test_authenticated_browser_data_is_never_rendered (test_evaluation.EvaluationTests.test_authenticated_browser_data_is_never_rendered)",
+          "passed": true
+        },
+        {
+          "check": "test_client_data_is_html_escaped (test_evaluation.EvaluationTests.test_client_data_is_html_escaped)",
+          "passed": true
+        },
+        {
+          "check": "test_dashboard_does_not_open_a_database_connection (test_evaluation.EvaluationTests.test_dashboard_does_not_open_a_database_connection)",
+          "passed": true
+        },
+        {
+          "check": "test_endpoints_and_block_restrictions_are_clear (test_evaluation.EvaluationTests.test_endpoints_and_block_restrictions_are_clear)",
+          "passed": true
+        },
+        {
+          "check": "test_every_claimed_scenario_has_recorded_evidence (test_evaluation.EvaluationTests.test_every_claimed_scenario_has_recorded_evidence)",
+          "passed": true
+        },
+        {
+          "check": "test_evidence_endpoints_cannot_mutate_state (test_evaluation.EvaluationTests.test_evidence_endpoints_cannot_mutate_state)",
+          "passed": true
+        },
+        {
+          "check": "test_headers_restrict_scripts_frames_and_connections (test_evaluation.EvaluationTests.test_headers_restrict_scripts_frames_and_connections)",
+          "passed": true
+        },
+        {
+          "check": "test_mobile_viewport_and_keyboard_navigation_are_present (test_evaluation.EvaluationTests.test_mobile_viewport_and_keyboard_navigation_are_present)",
+          "passed": true
+        },
+        {
+          "check": "test_no_cookie_or_identity_changes_on_json_head (test_evaluation.EvaluationTests.test_no_cookie_or_identity_changes_on_json_head)",
+          "passed": true
+        },
+        {
+          "check": "test_no_external_assets_or_telemetry_are_loaded (test_evaluation.EvaluationTests.test_no_external_assets_or_telemetry_are_loaded)",
+          "passed": true
+        },
+        {
+          "check": "test_only_allowlisted_synthetic_cases_are_present (test_evaluation.EvaluationTests.test_only_allowlisted_synthetic_cases_are_present)",
+          "passed": true
+        },
+        {
+          "check": "test_public_json_is_exact_bundled_snapshot (test_evaluation.EvaluationTests.test_public_json_is_exact_bundled_snapshot)",
+          "passed": true
+        },
+        {
+          "check": "test_public_page_requires_no_authentication (test_evaluation.EvaluationTests.test_public_page_requires_no_authentication)",
+          "passed": true
+        },
+        {
+          "check": "test_public_snapshot_has_no_authentication_material_or_private_paths (test_evaluation.EvaluationTests.test_public_snapshot_has_no_authentication_material_or_private_paths)",
+          "passed": true
+        },
+        {
+          "check": "test_query_parameters_cannot_select_database_records_or_files (test_evaluation.EvaluationTests.test_query_parameters_cannot_select_database_records_or_files)",
+          "passed": true
+        },
+        {
+          "check": "test_scheme_deadline_and_sla_remain_unchanged (test_evaluation.EvaluationTests.test_scheme_deadline_and_sla_remain_unchanged)",
+          "passed": true
+        },
+        {
+          "check": "test_snapshot_hash_is_the_file_hash (test_evaluation.EvaluationTests.test_snapshot_hash_is_the_file_hash)",
+          "passed": true
+        },
+        {
+          "check": "test_summary_totals_are_derived_from_assertions (test_evaluation.EvaluationTests.test_summary_totals_are_derived_from_assertions)",
+          "passed": true
+        },
+        {
+          "check": "test_transcript_and_sdk_fixtures_are_not_conflated (test_evaluation.EvaluationTests.test_transcript_and_sdk_fixtures_are_not_conflated)",
+          "passed": true
+        },
+        {
+          "check": "test_untested_scenarios_are_explicit_and_not_counted (test_evaluation.EvaluationTests.test_untested_scenarios_are_explicit_and_not_counted)",
+          "passed": true
+        },
+        {
+          "check": "test_hosted_connection_enforces_ssl_private_schema_and_timezone (test_hosted.DatabaseTests.test_hosted_connection_enforces_ssl_private_schema_and_timezone)",
+          "passed": true
+        },
+        {
+          "check": "test_ini_default_is_preserved (test_hosted.DatabaseTests.test_ini_default_is_preserved)",
+          "passed": true
+        },
+        {
+          "check": "test_invalid_schema_is_rejected (test_hosted.DatabaseTests.test_invalid_schema_is_rejected)",
+          "passed": true
+        },
+        {
+          "check": "test_arbitrary_urls_buckets_and_traversal_rejected_without_request (test_hosted.DocumentTests.test_arbitrary_urls_buckets_and_traversal_rejected_without_request)",
+          "passed": true
+        },
+        {
+          "check": "test_cleanup_uses_private_delete (test_hosted.DocumentTests.test_cleanup_uses_private_delete)",
+          "passed": true
+        },
+        {
+          "check": "test_download_requires_backend_auth (test_hosted.DocumentTests.test_download_requires_backend_auth)",
+          "passed": true
+        },
+        {
+          "check": "test_download_size_limit (test_hosted.DocumentTests.test_download_size_limit)",
+          "passed": true
+        },
+        {
+          "check": "test_error_does_not_include_provider_body_or_secret (test_hosted.DocumentTests.test_error_does_not_include_provider_body_or_secret)",
+          "passed": true
+        },
+        {
+          "check": "test_local_default_survives_adapter_change (test_hosted.DocumentTests.test_local_default_survives_adapter_change)",
+          "passed": true
+        },
+        {
+          "check": "test_private_bucket_is_accepted (test_hosted.DocumentTests.test_private_bucket_is_accepted)",
+          "passed": true
+        },
+        {
+          "check": "test_public_bucket_fails_closed (test_hosted.DocumentTests.test_public_bucket_fails_closed)",
+          "passed": true
+        },
+        {
+          "check": "test_storage_outage_blocks_submission_instead_of_claiming_document_exists (test_hosted.DocumentTests.test_storage_outage_blocks_submission_instead_of_claiming_document_exists)",
+          "passed": true
+        },
+        {
+          "check": "test_upload_is_private_random_reference_without_mobile (test_hosted.DocumentTests.test_upload_is_private_random_reference_without_mobile)",
+          "passed": true
+        },
+        {
+          "check": "test_upload_limits (test_hosted.DocumentTests.test_upload_limits)",
+          "passed": true
+        },
+        {
+          "check": "test_all_terminal_statuses_cannot_be_overwritten (test_officer.OfficerTests.test_all_terminal_statuses_cannot_be_overwritten)",
+          "passed": true
+        },
+        {
+          "check": "test_approval_and_authenticated_audit_actor (test_officer.OfficerTests.test_approval_and_authenticated_audit_actor)",
+          "passed": true
+        },
+        {
+          "check": "test_audit_failure_rolls_back_review_and_decision (test_officer.OfficerTests.test_audit_failure_rolls_back_review_and_decision)",
+          "passed": true
+        },
+        {
+          "check": "test_case_and_proof_changes_require_new_review (test_officer.OfficerTests.test_case_and_proof_changes_require_new_review)",
+          "passed": true
+        },
+        {
+          "check": "test_changed_allowlist_blocks_prior_review (test_officer.OfficerTests.test_changed_allowlist_blocks_prior_review)",
+          "passed": true
+        },
+        {
+          "check": "test_changed_reason_or_decision_invalidates_confirmation (test_officer.OfficerTests.test_changed_reason_or_decision_invalidates_confirmation)",
+          "passed": true
+        },
+        {
+          "check": "test_competing_decisions_one_winner (test_officer.OfficerTests.test_competing_decisions_one_winner)",
+          "passed": true
+        },
+        {
+          "check": "test_direct_confirmation_without_preview_rejected (test_officer.OfficerTests.test_direct_confirmation_without_preview_rejected)",
+          "passed": true
+        },
+        {
+          "check": "test_expired_and_revoked_officer_session (test_officer.OfficerTests.test_expired_and_revoked_officer_session)",
+          "passed": true
+        },
+        {
+          "check": "test_expired_review (test_officer.OfficerTests.test_expired_review)",
+          "passed": true
+        },
+        {
+          "check": "test_inspection_and_browser_proof (test_officer.OfficerTests.test_inspection_and_browser_proof)",
+          "passed": true
+        },
+        {
+          "check": "test_pagination (test_officer.OfficerTests.test_pagination)",
+          "passed": true
+        },
+        {
+          "check": "test_queue_summary_and_list_are_scoped_and_masked (test_officer.OfficerTests.test_queue_summary_and_list_are_scoped_and_masked)",
+          "passed": true
+        },
+        {
+          "check": "test_rejection_with_reason (test_officer.OfficerTests.test_rejection_with_reason)",
+          "passed": true
+        },
+        {
+          "check": "test_required_reason (test_officer.OfficerTests.test_required_reason)",
+          "passed": true
+        },
+        {
+          "check": "test_review_bound_to_actor_session (test_officer.OfficerTests.test_review_bound_to_actor_session)",
+          "passed": true
+        },
+        {
+          "check": "test_strict_signed_officer_token (test_officer.OfficerTests.test_strict_signed_officer_token)",
+          "passed": true
+        },
+        {
+          "check": "test_unsafe_paths_not_served (test_officer.OfficerTests.test_unsafe_paths_not_served)",
+          "passed": true
+        },
+        {
+          "check": "test_unsupported_block_cannot_be_read_or_decided (test_officer.OfficerTests.test_unsupported_block_cannot_be_read_or_decided)",
+          "passed": true
+        },
+        {
+          "check": "test_withdrawal_race (test_officer.OfficerTests.test_withdrawal_race)",
+          "passed": true
+        },
+        {
+          "check": "test_immediate_repeat_does_not_duplicate_audit_or_notification (test_scheduler.SchedulerTests.test_immediate_repeat_does_not_duplicate_audit_or_notification)",
+          "passed": true
+        },
+        {
+          "check": "test_recent_pending_case_keeps_original_fifteen_day_cutoff (test_scheduler.SchedulerTests.test_recent_pending_case_keeps_original_fifteen_day_cutoff)",
+          "passed": true
+        },
+        {
+          "check": "test_two_competing_scheduler_runs_have_one_audit_and_notification (test_scheduler.SchedulerTests.test_two_competing_scheduler_runs_have_one_audit_and_notification)",
+          "passed": true
+        },
+        {
+          "check": "test_application_number_collision_retried (test_services.IntegrationTests.test_application_number_collision_retried)",
+          "passed": true
+        },
+        {
+          "check": "test_concurrent_decisions (test_services.IntegrationTests.test_concurrent_decisions)",
+          "passed": true
+        },
+        {
+          "check": "test_concurrent_submissions (test_services.IntegrationTests.test_concurrent_submissions)",
+          "passed": true
+        },
+        {
+          "check": "test_deadline_rejects_submission_but_not_followup (test_services.IntegrationTests.test_deadline_rejects_submission_but_not_followup)",
+          "passed": true
+        },
+        {
+          "check": "test_decision_audit_failure_rolls_back (test_services.IntegrationTests.test_decision_audit_failure_rolls_back)",
+          "passed": true
+        },
+        {
+          "check": "test_decision_vs_withdrawal (test_services.IntegrationTests.test_decision_vs_withdrawal)",
+          "passed": true
+        },
+        {
+          "check": "test_direct_database_duplicate_protection (test_services.IntegrationTests.test_direct_database_duplicate_protection)",
+          "passed": true
+        },
+        {
+          "check": "test_invalid_application_inserts_nothing (test_services.IntegrationTests.test_invalid_application_inserts_nothing)",
+          "passed": true
+        },
+        {
+          "check": "test_migration_is_repeatable (test_services.IntegrationTests.test_migration_is_repeatable)",
+          "passed": true
+        },
+        {
+          "check": "test_nonpending_cannot_be_decided_or_withdrawn (test_services.IntegrationTests.test_nonpending_cannot_be_decided_or_withdrawn)",
+          "passed": true
+        },
+        {
+          "check": "test_rejected_and_withdrawn_can_reapply (test_services.IntegrationTests.test_rejected_and_withdrawn_can_reapply)",
+          "passed": true
+        },
+        {
+          "check": "test_simultaneous_different_mobile_number_collision (test_services.IntegrationTests.test_simultaneous_different_mobile_number_collision)",
+          "passed": true
+        },
+        {
+          "check": "test_submission_and_ownership (test_services.IntegrationTests.test_submission_and_ownership)",
+          "passed": true
+        },
+        {
+          "check": "test_submission_audit_failure_rolls_back_everything (test_services.IntegrationTests.test_submission_audit_failure_rolls_back_everything)",
+          "passed": true
+        },
+        {
+          "check": "test_web_decision_requires_reason_and_ignores_forged_actor (test_services.IntegrationTests.test_web_decision_requires_reason_and_ignores_forged_actor)",
+          "passed": true
+        },
+        {
+          "check": "test_web_officer_boundary (test_services.IntegrationTests.test_web_officer_boundary)",
+          "passed": true
+        },
+        {
+          "check": "test_withdrawal_audit_failure_rolls_back (test_services.IntegrationTests.test_withdrawal_audit_failure_rolls_back)",
+          "passed": true
+        },
+        {
+          "check": "test_age_boundary (test_services.ValidationTests.test_age_boundary)",
+          "passed": true
+        },
+        {
+          "check": "test_bank_length (test_services.ValidationTests.test_bank_length)",
+          "passed": true
+        },
+        {
+          "check": "test_blocks_preserved (test_services.ValidationTests.test_blocks_preserved)",
+          "passed": true
+        },
+        {
+          "check": "test_deadline_exactly_preserved (test_services.ValidationTests.test_deadline_exactly_preserved)",
+          "passed": true
+        },
+        {
+          "check": "test_decision_inputs_rejected_before_database (test_services.ValidationTests.test_decision_inputs_rejected_before_database)",
+          "passed": true
+        },
+        {
+          "check": "test_document_required (test_services.ValidationTests.test_document_required)",
+          "passed": true
+        },
+        {
+          "check": "test_fixture_cleanup_refuses_a_non_test_schema (test_services.ValidationTests.test_fixture_cleanup_refuses_a_non_test_schema)",
+          "passed": true
+        },
+        {
+          "check": "test_ifsc_optional_but_validated_when_present (test_services.ValidationTests.test_ifsc_optional_but_validated_when_present)",
+          "passed": true
+        },
+        {
+          "check": "test_invalid_dob (test_services.ValidationTests.test_invalid_dob)",
+          "passed": true
+        },
+        {
+          "check": "test_leap_day_age (test_services.ValidationTests.test_leap_day_age)",
+          "passed": true
+        },
+        {
+          "check": "test_normalization_and_existing_optional_fields (test_services.ValidationTests.test_normalization_and_existing_optional_fields)",
+          "passed": true
+        },
+        {
+          "check": "test_required_fields (test_services.ValidationTests.test_required_fields)",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

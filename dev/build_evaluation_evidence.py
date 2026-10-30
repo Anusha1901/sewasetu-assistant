@@ -145,5 +145,5 @@ def validate(data):
 if __name__ == '__main__':
     payload = build()
     OUTPUT.parent.mkdir(exist_ok=True)
-    OUTPUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    OUTPUT.write_bytes((json.dumps(payload,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
     print('Compiled public evidence: 376 recorded checks; no raw logs, credentials or private records.')

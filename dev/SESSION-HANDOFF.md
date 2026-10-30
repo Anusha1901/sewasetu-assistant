@@ -1,6 +1,22 @@
-# Session handoff — Stage 5 complete, 30 October 2026
+# Session handoff — Stage 6 complete, 30 October 2026
 
-STOP: user requested completion of Stage 5 only. Await explicit approval before Stage 6/dashboard.
+STOP: Stage 6 complete. Await explicit approval before preparing final submission assets.
+
+Stage 6 report: dev/STAGE6.md. Public evaluation dashboard:
+https://sewasetu-assistant-wgcq.onrender.com/eval-dashboard
+Deployed runtime commit 53a093e; verified public HTTP 200, responsive rendering, exact
+snapshot digest, privacy boundaries, both real authenticated Codex MCP read-only tools.
+402 final Stage 6 checks passed, zero failures (107 unittest, no skips). Sanitized final
+assertions archived in dev/evidence/stage6/results.json. Dashboard intentionally retains
+the historical 376 Stage 5 checks (275 local, 101 live), 22 scenarios including 3 NOT TESTED.
+Synthetic cases only; actual selected Codex excerpts are distinct from scripted SDK tests.
+No MCP/OAuth/service/rules/deadline/scheduler changes or new public submissions in Stage 6.
+Local dev volumes retained: 6 Stage One cases, 70 OAuth clients, 9702 deemed apps/audits.
+All 100000 seed rows retained. Local dev stack remains RUNNING.
+Final assets NOT prepared: evaluator invitation, private login handoff, ZIP including .git,
+three-minute face/screen Loom, one-page design note. Original deadline unchanged.
+
+Historical Stage 5 context follows (its local fixture counts are superseded above).
 
 Final report: dev/STAGE5.md. Aggregate evidence: dev/stage5-final-summary.json.
 376 final passing checks, zero final failures: 275 local regression + 101 live checks.
@@ -10,7 +26,7 @@ Public portal https://sewasetu-assistant-wgcq.onrender.com
 Citizen /mcp/citizen; officer /mcp/officer; both Streamable HTTP.
 Render Free Frankfurt, Supabase Paris project ipbcvfrdeeqvbhysscdi, private age-proofs.
 Private GitHub Anusha1901/sewasetu-assistant; gh CLI auth works outside restrictions.
-No paid hosting/model API or domain; dashboard not built.
+No paid hosting/model API or domain; dashboard now built in Stage 6.
 
 User's Codex citizen/officer servers are authenticated and tools available. Real Codex
 case 100011 / SSP26495722 (Kamala Devi Synthetic Test) APPROVED after human declaration
