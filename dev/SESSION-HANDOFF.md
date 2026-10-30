@@ -11,11 +11,20 @@ All original 247 checks plus 24 hosting checks passed locally (271 total).
 The dev stack remains running with preserved volumes. Latest counts for persistence:
 STAGE1_EXPECTED_APPLICATIONS=27, STAGE1_EXPECTED_CLIENTS=43, STAGE1_EXPECTED_DEEMED=9703.
 
-Next user action: run `python deploy/setup_render.py` from project root; enter the
-Supabase Session pooler URI (5432) and legacy service_role key in hidden local prompts.
-It creates ignored deploy/secrets/render.env and render-officer.json. Never print them
-or ask the user to paste keys/passwords into chat. Do not import/reset Supabase until
-ready; initialization refuses nonempty schema. Public deployment and external AI-client
+The user completed `python deploy/setup_render.py`. Ignored deploy/secrets/render.env
+and render-officer.json now exist; never print them or ask for chat credentials.
+On 30 October, with explicit user authorization, Supabase was initialized successfully:
+100000 original applications in sewasetu; TLS verified, Sonari/Rajapara present, both
+unique indexes present, anon/authenticated schema access denied. Private age-proofs
+bucket verified with one synthetic upload/download/delete. All 10 live checks passed;
+database size 90216115 bytes (86.04 MiB). No synthetic application was created remotely.
+DO NOT rerun seed initialization: this schema now contains the evaluation records.
+The local private env still has placeholder PUBLIC_BASE_URL; set it to the actual Render
+URL before public OAuth testing. User is being guided through Render New Web Service
+(private repo, main, Docker, Free, root blank, deploy/render.Dockerfile, health /healthz,
+import private env, exact public URL, auto deploy off). Await actual onrender.com URL.
+Hosted scheduler is NOT enabled yet; GitHub DATABASE_URL secret and opt-in variable
+still need configuration plus a manual workflow test. Public deployment and external AI-client
 tests are still outstanding. GitHub CLI auth works outside the restricted environment;
 the connector cannot access the private repository. Source had no original Git history.
 No scheme/deadline or original cron/script changes were made; evaluator dates unconfirmed.

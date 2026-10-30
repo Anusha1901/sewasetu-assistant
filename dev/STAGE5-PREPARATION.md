@@ -1,8 +1,15 @@
 # Stage 5 preparation — 30 October 2026
 
 Stage 5 is **not complete**. Render/Supabase accounts and a private age-proofs bucket
-were created by the user. No deployment, Supabase import, remote credential validation,
-or real external AI-assistant conversation has been performed by this work yet.
+were created by the user. The user entered credentials through the private local helper
+and explicitly authorized initialization. Supabase now contains all 100000 original
+applications in private schema sewasetu. Ten live checks passed: TLS, schema selection,
+seed count, supported blocks, denied anon/authenticated schema access, unique indexes,
+private bucket, synthetic upload, byte-exact download and test-object deletion.
+Database size after import: 90216115 bytes (86.04 MiB).
+No real applicant data was added remotely and no synthetic application was submitted.
+Do not repeat seed initialization. Public Render deployment and real external AI-assistant
+testing remain outstanding; the hosted scheduler is not yet enabled.
 
 ## Local result
 
