@@ -13,7 +13,9 @@ jobs:
   approve:
     if: vars.ENABLE_PENSION_SCHEDULER == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # The first seed import has hundreds of overdue notifications; remote DB writes
+    # can exceed 15 minutes even though decisions/audit have already committed.
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
