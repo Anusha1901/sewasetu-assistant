@@ -24,6 +24,16 @@ def data(**kw):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_fixture_cleanup_refuses_a_non_test_schema(self):
+        from types import SimpleNamespace
+        with patch.object(s, 'transaction') as transaction:
+            cur = transaction.return_value.__enter__.return_value
+            cur.fetchone.return_value = ('public',)
+            with self.assertRaisesRegex(RuntimeError, 'Refusing fixture cleanup'):
+                IntegrationTests.setUp(SimpleNamespace(schema='stage2_test_guard'))
+            self.assertEqual(cur.execute.call_count, 1)
+            self.assertEqual(cur.execute.call_args.args[0], 'SELECT current_schema()')
+
     def setUp(self):
         self.clock = patch.object(s, 'now_ist', return_value=datetime(2026, 10, 27, 12))
         self.clock.start()
@@ -126,6 +136,9 @@ class IntegrationTests(unittest.TestCase):
 
     def setUp(self):
         with s.transaction() as cur:
+            cur.execute('SELECT current_schema()')
+            if cur.fetchone()[0] != self.schema:
+                raise RuntimeError('Refusing fixture cleanup outside this test class temporary schema')
             cur.execute('TRUNCATE applications, portal_users, audit_log RESTART IDENTITY CASCADE')
         self.clock = patch.object(s, 'now_ist', return_value=datetime(2026, 10, 27, 12))
         self.clock.start()

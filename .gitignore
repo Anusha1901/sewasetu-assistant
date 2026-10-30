@@ -19,3 +19,6 @@ __pycache__/
 dev/*.jsonl
 dev/*unit-integration.txt
 dev/*results.txt
+dev/*bug-reproduction.txt
+output/
+tmp/
