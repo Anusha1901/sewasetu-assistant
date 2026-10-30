@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+{% if error %}<h2>Action unavailable</h2><p>{{ error }}</p>
+{% elif finished %}<h2>Sign-in ended</h2><p>This assistant can no longer act for you. Close this page and finish your conversation on a shared device.</p>
+{% elif uploaded %}<h2>Age proof uploaded</h2><p>Return to your assistant. Ask it to refresh your application preview before you accept the declaration and submit.</p>
+{% elif kind == 'finish' %}<h2>Finish this assistant sign-in</h2>
+<p>Verified mobile ending {{ masked }}. This ends this sign-in and clears this browser's portal session.</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="btn" type="submit">End sign-in</button></form>
+{% else %}<h2>Upload age proof</h2><p>Verified mobile ending {{ masked }}. Choose a birth certificate, school leaving certificate or Voter ID for this applicant. JPG, PNG or PDF, up to 5 MB.</p>
+<p>Do not upload another person's proof on a shared phone. You must review the application with your assistant before submission.</p>
+<form method="post" enctype="multipart/form-data"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="file" name="document" accept=".jpg,.jpeg,.png,.pdf" required><p><button class="btn" type="submit">Upload proof</button></p></form>
+{% endif %}
+{% endblock %}

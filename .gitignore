@@ -1,0 +1,21 @@
+# Local configuration, credentials and private deployment artifacts
+.env
+.env.*
+!.env.example
+app/config/app.ini
+deploy/secrets/
+deploy/backups/
+deploy/.rehearsal/
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+.venv/
+.gemini/
+.claude/
+# OAuth client tokens must stay outside repository history.
+*-oauth-tokens.json
+# Generated verification output stays local; scripts and reports remain reviewable.
+dev/*.jsonl
+dev/*unit-integration.txt
+dev/*results.txt

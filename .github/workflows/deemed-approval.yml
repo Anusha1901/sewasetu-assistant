@@ -1,0 +1,28 @@
+name: Statutory deemed approval
+on:
+  workflow_dispatch:
+  schedule:
+    # 02:00 IST daily; GitHub may delay scheduled runs. Monitor each run.
+    - cron: '30 20 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: statutory-deemed-approval
+  cancel-in-progress: false
+jobs:
+  approve:
+    if: vars.ENABLE_PENSION_SCHEDULER == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Build existing application and simulator
+        run: docker build -f deploy/render.Dockerfile -t sewasetu-scheduler .
+      - name: Run unchanged statutory job with persistent simulated notifications
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: >-
+          docker run --rm -e DATABASE_URL -e DATABASE_SCHEMA=sewasetu
+          sewasetu-scheduler python /app/hosting/render_start.py scheduler

@@ -1,0 +1,25 @@
+{
+    email {$ACME_EMAIL}
+    # Do not emit request/access logs containing authorization callback or capability URLs.
+}
+
+{$PUBLIC_DOMAIN} {
+    header {
+        Strict-Transport-Security "max-age=2592000"
+        X-Content-Type-Options "nosniff"
+        Referrer-Policy "no-referrer"
+        -Server
+    }
+    request_body {
+        max_size 8MB
+    }
+    # Defense in depth: the Flask route additionally requires departmental browser login.
+    @sms path /__gateway /__gateway/*
+    basic_auth @sms {
+        {$EVAL_SMS_USERNAME} {$EVAL_SMS_PASSWORD_HASH}
+    }
+    reverse_proxy app:8000 {
+        # Forward SSE/Streamable HTTP immediately, with no response buffering.
+        flush_interval -1
+    }
+}

@@ -1,0 +1,11 @@
+.git
+dev
+deploy/secrets
+deploy/backups
+deploy/.rehearsal
+**/.env*
+**/__pycache__
+**/*.pyc
+.venv
+DIRECTOR-NOTE.mp3
+app/config/app.ini

@@ -1,0 +1,65 @@
+# Development-only deployment. Run from the project directory with:
+# docker compose -p sewasetu-stage1-dev -f dev/compose.yml up --build -d
+# Uses the original application images/source, with separate project volumes.
+name: sewasetu-stage1-dev
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: sewasetu
+      POSTGRES_USER: sewasetu
+      POSTGRES_PASSWORD: sewasetu123
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../app/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ../seed/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U sewasetu -d sewasetu"]
+      interval: 5s
+      timeout: 5s
+      retries: 120
+      start_period: 10s
+
+  app:
+    build: ../app
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ENABLE_LOCAL_SMS_CONSOLE: "1"
+      OFFICER_MCP_ALLOWED_ORIGINS: ${OFFICER_MCP_ALLOWED_ORIGINS:-}
+      CITIZEN_MCP_ALLOWED_ORIGINS: ${CITIZEN_MCP_ALLOWED_ORIGINS:-}
+      CITIZEN_MCP_BLOCKS: ${CITIZEN_MCP_BLOCKS:-Sonari,Rajapara}
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in your shell before starting}
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in your shell before starting}
+      PUBLIC_BASE_URL: http://localhost:8000
+    depends_on:
+      db:
+        condition: service_healthy
+      smsgw:
+        condition: service_started
+    volumes:
+      - uploads:/var/sewasetu/uploads
+      - applogs:/var/log/sewasetu
+
+  scheduler:
+    build: ../app
+    command: ["sh", "-c", "until python /app/scripts/deemed_approval.py; do sleep 5; done; exec cron -f"]
+    depends_on:
+      db:
+        condition: service_healthy
+      smsgw:
+        condition: service_started
+    volumes:
+      - applogs:/var/log/sewasetu
+
+  smsgw:
+    build: ../smsgw
+    expose:
+      - "8025"
+
+volumes:
+  pgdata:
+  uploads:
+  applogs:
