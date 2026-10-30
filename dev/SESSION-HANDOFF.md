@@ -1,88 +1,61 @@
-# Session handoff — 30 October 2026
+# Session handoff — Stage 5 complete, 30 October 2026
 
-## Current work: Stage 5 free Render/Supabase preparation
+STOP: user requested completion of Stage 5 only. Await explicit approval before Stage 6/dashboard.
 
-The user approved Stage 5 and chose Render Free after reviewing hosting constraints.
-They created private GitHub repo `Anusha1901/sewasetu-assistant`, a Render account,
-and Supabase project `ipbcvfrdeeqvbhysscdi` with private `age-proofs` bucket; actual
-region was selected automatically. No remote secrets have been entered yet.
-See `dev/STAGE5-PREPARATION.md` and `deploy/RENDER.md` for exact current status.
-All original 247 checks plus 24 hosting checks passed locally (271 total).
-The dev stack remains running with preserved volumes. Latest counts for persistence:
-STAGE1_EXPECTED_APPLICATIONS=27, STAGE1_EXPECTED_CLIENTS=43, STAGE1_EXPECTED_DEEMED=9703.
+Final report: dev/STAGE5.md. Aggregate evidence: dev/stage5-final-summary.json.
+376 final passing checks, zero final failures: 275 local regression + 101 live checks.
+This includes the original 247 checks. Final unittest count 87, no skips.
 
-The user completed `python deploy/setup_render.py`. Ignored deploy/secrets/render.env
-and render-officer.json now exist; never print them or ask for chat credentials.
-On 30 October, with explicit user authorization, Supabase was initialized successfully:
-100000 original applications in sewasetu; TLS verified, Sonari/Rajapara present, both
-unique indexes present, anon/authenticated schema access denied. Private age-proofs
-bucket verified with one synthetic upload/download/delete. All 10 live checks passed;
-database size 90216115 bytes (86.04 MiB). No synthetic application was created remotely.
-DO NOT rerun seed initialization: this schema now contains the evaluation records.
-The local private env still has placeholder PUBLIC_BASE_URL; set it to the actual Render
-URL before public OAuth testing. User is being guided through Render New Web Service
-(private repo, main, Docker, Free, root blank, deploy/render.Dockerfile, health /healthz,
-import private env, exact public URL, auto deploy off). Await actual onrender.com URL.
-Hosted scheduler is NOT enabled yet; GitHub DATABASE_URL secret and opt-in variable
-still need configuration plus a manual workflow test. Public deployment and external AI-client
-tests are still outstanding. GitHub CLI auth works outside the restricted environment;
-the connector cannot access the private repository. Source had no original Git history.
-No scheme/deadline or original cron/script changes were made; evaluator dates unconfirmed.
+Public portal https://sewasetu-assistant-wgcq.onrender.com
+Citizen /mcp/citizen; officer /mcp/officer; both Streamable HTTP.
+Render Free Frankfurt, Supabase Paris project ipbcvfrdeeqvbhysscdi, private age-proofs.
+Private GitHub Anusha1901/sewasetu-assistant; gh CLI auth works outside restrictions.
+No paid hosting/model API or domain; dashboard not built.
 
-## Historical Stage 4 handoff (superseded counts below)
+User's Codex citizen/officer servers are authenticated and tools available. Real Codex
+case 100011 / SSP26495722 (Kamala Devi Synthetic Test) APPROVED after human declaration
+and exact officer preview confirmation; citizen sees status/reason, Supabase audit checked.
+Remaining public automated official-SDK cases: 100012 / SSP26545674 REJECTED,
+100013 / SSP26669481 WITHDRAWN, 100014 / SSP26635026 concurrent decisions winner REJECTED.
+No pending synthetic cases. Hosted counts: 100004 applications, 200008 audits,
+9700 deemed apps and matching audit rows. Do not reseed or reset hosted DB.
+All tests use synthetic applicants; no private records/credentials in committed results.
 
-Stages 1–4 are complete locally. Stop here and wait for the user's next-stage approval.
-The Officer MCP and Citizen MCP are implemented; the evaluation dashboard is not built.
+User manually restarted Render. Application/document/audit hashes and global counts
+persisted; a fresh SDK connected. After 988.6 seconds of quiet, first public MCP response
+arrived in 24.634 seconds, full authenticated reconnect/tool call in 25.844 seconds,
+first attempt successful. Both actual Codex servers worked afterward. Public probes 8/8.
+Browser automation stopped because active URL could not be safely verified; do not retry
+UI automation in the same stopped turn. User did restart; API/DB verification completed.
 
-The isolated `sewasetu-stage1-dev` stack is RUNNING (app, db, scheduler, smsgw).
-The user authorized restarting it for Stage 4. All database/uploads/logs remain in the
-same dedicated development volumes. Do not delete/reset them or modify the seed.
+Scheduler bug found and fixed: original recent-one-minute audit query duplicated audits
+on repeat/parallel runs. Now UPDATE RETURNING id drives exact per-run audit/notifications.
+No 15-day/eligibility/deadline changes. Two new repeat/race regressions failed before fix;
+three scheduler tests pass after fix plus test fixture isolation guard regression.
+Fixed GitHub runs 41030375367 and 41030731190 SUCCESS; DB baseline unchanged afterward.
+Workflow enabled via ENABLE_PENSION_SCHEDULER=true; private DATABASE_URL secret set;
+02:00 IST schedule; 30-minute limit. Initial historical run timed out after committing
+700 approvals; 41 missing simulated notifications were recovered (see final report).
 
-Latest report: `dev/STAGE4.md` (full file inventory, authentication design, test evidence
-and deployment/evaluation risks). Previous reports remain historical evidence.
-Latest result: **247 checks passed, zero final failures**, including the original 188.
+Test-harness mistake: broad patch.stopall removed temporary schema DB patch and reset
+isolated LOCAL synthetic application/audit fixtures. Hosted records and original seed never
+affected. Fixed owned-mock cleanup and added current_schema guard before TRUNCATE.
+Restored local seed transactionally, regenerated test cases, reran all checks. Earlier local
+synthetic history was reset, not recovered; OAuth clients and upload files retained.
+All 100000 original seed rows present after corrected tests. Local final persistence counts:
+STAGE1_EXPECTED_APPLICATIONS=3, STAGE1_EXPECTED_CLIENTS=61, STAGE1_EXPECTED_DEEMED=9701.
+Local dev stack remains RUNNING with same volume set, sewasetu-stage1-dev, dev/compose.yml.
+Private pre-restore snapshot in deploy/backups (ignored).
 
-Endpoints:
-- http://localhost:8000/mcp/citizen — five citizen tools.
-- http://localhost:8000/mcp/officer — four officer tools.
-- http://localhost:8000/ — existing web portal.
+Private env deploy/secrets/render.env; officer creds deploy/secrets/render-officer.json.
+Never print them or put them in chat/Git. Session/snapshot test files in ignored
+ deploy/secrets/stage5-evidence; tokens may expire. Revoke only dedicated test sessions,
+never the user's sessions. Source INI app/config/app.ini ignored; sample included in repo.
 
-Both MCPs use the existing OAuth server and shared business services. Both enforce
-CITIZEN_MCP_BLOCKS (default Sonari,Rajapara). Officer decisions require inspection,
-a proposal with reason, and explicit token-bound confirmation. Changes use shared
-atomic pending-only decision/audit logic; terminal states cannot be overwritten.
-Citizen tool/preparation/upload modules are unchanged; shared auth/gateway interfaces
-were extended for officer compatibility. No paid AI model integration was introduced.
+Original app/config/app.ini, app/deploy/crontab and seed/seed.sql hashes unchanged.
+Deadline stays 31 October 2026 23:59 IST. Do NOT change without explicit approval.
+Evaluator dates still unconfirmed. Free Render cold-start, Supabase quotas/pausing,
+GitHub timing, simulated SMS, ephemeral file logs and backup/retention remain limitations.
 
-Seed, scheme configuration, deemed-approval script and crontab are unchanged.
-Deadline: **31 October 2026, 23:59 IST**. Never modify it without explicit user approval.
-
-Development credentials remain in ignored `dev/.env.local`; officer username `admin`.
-Never print or commit the credential file. Migrations 001, 002 and 003 are already applied.
-
-From the nested project directory, PowerShell:
-
-```powershell
-docker compose --env-file dev/.env.local -p sewasetu-stage1-dev -f dev/compose.yml up -d
-docker compose --env-file dev/.env.local -p sewasetu-stage1-dev -f dev/compose.yml ps
-docker compose --env-file dev/.env.local -p sewasetu-stage1-dev -f dev/compose.yml stop
-```
-
-Docker executable if PATH is stale:
-`C:\Users\anush\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe`.
-Docker Desktop must run Linux containers; Docker access may require execution outside
-this task's sandbox. For builds, add that directory to the command's PATH for the
-credential helper. Existing Dockerfiles still build the combined ASGI/Flask listener.
-
-Retained test snapshot: 24 Stage One synthetic applications, three Stage Three cases,
-12 Stage Four cases, 34 OAuth clients. Two Stage Four cases exercised the actual unchanged
-15-day job, so deemed-approved application and audit counts are both 9702. Use
-STAGE1_EXPECTED_APPLICATIONS=24, STAGE1_EXPECTED_CLIENTS=34 and
-STAGE1_EXPECTED_DEEMED=9702 for the original persistence script. Additional workflow
-runs increase these values. Test-created pending cases are withdrawn at script exit.
-
-Remaining before public deployment/evaluation: HTTPS hosting/correct PUBLIC_BASE_URL,
-manual external-client account testing, named staff accounts and credential management,
-authorized SMS simulation or real SMS, upload-browser continuity, retention cleanup,
-legacy security considerations, and evaluation dates after the unchanged deadline.
-Do not start the dashboard or any further stage without the user's approval.
+Production source fix applies to GitHub scheduler (builds main). Portal logic unchanged.
+Commits use [skip render] to avoid unrequested redeploy; no dashboard implementation.

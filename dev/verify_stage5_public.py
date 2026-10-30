@@ -21,6 +21,7 @@ from urllib.parse import parse_qs, urlparse
 sys.path.insert(0, '/app')
 
 import jwt
+import httpx
 import requests
 from fpdf import FPDF
 from mcp import ClientSession
@@ -286,9 +287,55 @@ async def reconnect():
     print(json.dumps({'reconnect_seconds': round(time.monotonic() - started, 3)}), flush=True)
 
 
+async def cold():
+    quiet = json.loads((STATE / 'quiet-window.json').read_text())
+    elapsed = (datetime.now(timezone.utc) - datetime.fromisoformat(quiet['started_at_utc'])).total_seconds()
+    check('cold reconnect waits at least sixteen minutes without test traffic', elapsed >= 960)
+    identity = json.loads((STATE / 'officer-session.json').read_text())
+    started = time.monotonic()
+    first_response = None
+
+    async def observe(response):
+        nonlocal first_response
+        if first_response is None:
+            first_response = {'status': response.status_code,
+                'content_type': response.headers.get('content-type'),
+                'seconds_to_headers': round(time.monotonic() - started, 3)}
+
+    def factory(**kwargs):
+        kwargs.setdefault('follow_redirects', True)
+        kwargs['event_hooks'] = {'response': [observe]}
+        return httpx.AsyncClient(**kwargs)
+
+    async def attempt():
+        async with streamablehttp_client(resource('officer'),
+                headers={'Authorization': 'Bearer ' + identity['tokens']['access_token']},
+                timeout=120, sse_read_timeout=120, httpx_client_factory=factory) as (read, write, _):
+            async with ClientSession(read, write) as client:
+                await client.initialize()
+                tools = await client.list_tools()
+                summary = await tool(client, 'get_queue_summary')
+                return len(tools.tools) == 4 and summary.get('ok') and summary.get('officer') == ADMIN_USER
+
+    first_ok = False
+    try:
+        first_ok = bool(await attempt())
+    except Exception as error:
+        print(json.dumps({'cold_first_attempt_error_type': type(error).__name__,
+                          'private_exception_details_withheld': True}), flush=True)
+    print(json.dumps({'quiet_seconds': round(elapsed, 3), 'first_response': first_response,
+                      'first_attempt_succeeded': first_ok}), flush=True)
+    if not first_ok:
+        await asyncio.sleep(2)
+        check('external MCP client reconnects after cold-start retry', await attempt())
+    else:
+        check('external MCP client connects on first post-idle attempt', True)
+    print(json.dumps({'cold_reconnect_total_seconds': round(time.monotonic() - started, 3)}), flush=True)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode', choices=['full', 'snapshot', 'compare', 'reconnect'])
+    parser.add_argument('mode', choices=['full', 'snapshot', 'compare', 'reconnect', 'cold'])
     args = parser.parse_args()
     try:
         if args.mode == 'full':
@@ -302,8 +349,10 @@ if __name__ == '__main__':
             check('application records and exact private documents persist', before['cases'] == after['cases'])
             for key in before['global']:
                 check('persistent global ' + key + ' unchanged', before['global'][key] == after['global'][key])
-        else:
+        elif args.mode == 'reconnect':
             asyncio.run(reconnect())
+        else:
+            asyncio.run(cold())
     except BaseException as exc:
         print(json.dumps({'failure_type': type(exc).__name__, 'details': 'Private exception details withheld; inspect failed check.'}), flush=True)
         raise SystemExit(1)

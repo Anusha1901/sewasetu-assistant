@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "stage5-final-main-results.jsonl": 76,
+    "stage5-final-citizen-results.jsonl": 45,
+    "stage5-final-officer-results.jsonl": 39,
+    "stage5-final-citizen-oauth-results.jsonl": 3,
+    "stage5-final-persistence-results.jsonl": 15,
+    "stage5-final-hosted-adapter-results.jsonl": 10,
+    "stage5-public-remaining-results.jsonl": 79,
+    "stage5-hosted-restart-results.jsonl": 6,
+    "stage5-hosted-reconnect-results.jsonl": 2,
+    "stage5-cold-start-results.jsonl": 2,
+    "stage5-final-public-probe-results.jsonl": 8,
+    "stage5-scheduler-live-results.jsonl": 4,
+    "unit_and_integration": 87
+  },
+  "total_passed": 376,
+  "final_failures": 0
+}

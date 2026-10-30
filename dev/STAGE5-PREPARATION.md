@@ -1,5 +1,7 @@
 # Stage 5 preparation — 30 October 2026
 
+Historical preparation report. **Stage 5 is now complete; see STAGE5.md for final results.**
+
 Stage 5 is **not complete**. Render/Supabase accounts and a private age-proofs bucket
 were created by the user. The user entered credentials through the private local helper
 and explicitly authorized initialization. Supabase now contains all 100000 original
